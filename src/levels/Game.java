@@ -71,7 +71,7 @@ public class Game {
 			System.out.println("Obrigado, até a proxima.");
 		}
 		else {
-			//INICIO DO DESAFIO 1
+			//INICIO DO DESAFIO 01
 			texto = " -     DESAFIO 01     - ";
 
 			delay(texto);
@@ -109,9 +109,9 @@ public class Game {
 			texto = " - Fim do desafio 1 - ";
 			delay(texto);
 		}
-		// FINAL DESAFIO 1
+		// FINAL DESAFIO 01
 		
-		//INICIO DO DESAFIO 2
+		//INICIO DO DESAFIO 02
 		texto = " -     DESAFIO 02     - ";
 
 		delay(texto);
@@ -159,10 +159,10 @@ public class Game {
 		texto = " - Fim do desafio 2 - ";
 		delay(texto);
 
-		// FINAL DO DESAFIO 2
+		// FINAL DO DESAFIO 02
 		
 		
-		//INICIO DO DESAFIO 4 
+		//INICIO DO DESAFIO 04 
 		 texto = "DESAFIO 04\n";
 		delay(texto);
 		
@@ -198,7 +198,7 @@ public class Game {
 				+ "Tambem percebe-se uma fechadura eletrônica que pede uma senha de 6 digitos para o acesso.";
 		delay(texto);
 		
-		//FIM DO DESAFIO 4
+		//FIM DO DESAFIO 04
 		sc.close();
 }	
 		
