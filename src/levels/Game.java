@@ -160,6 +160,13 @@ public class Game {
 		delay(texto);
 
 		// FINAL DO DESAFIO 02
+                
+                // INÍCIO DO DESAFIO 03
+                
+                
+                
+                
+                // FIM DO DESAFIO 03
 		
 		
 		//INICIO DO DESAFIO 04 
