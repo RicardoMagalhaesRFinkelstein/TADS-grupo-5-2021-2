@@ -5,6 +5,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Game {
 
+    static String texto;
+
+
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
@@ -163,7 +166,64 @@ public class Game {
                 
                 // INÍCIO DO DESAFIO 03
                 
+                texto= "Após a ligação, o agente ficou sem saber o que fazer,/n"
+                        + "pensando em qual decisão tomar";
+                delay(texto);
                 
+                texto = "salvar um grupo de professorar ou equipe de soldados americanos";
+                delay(texto);
+                
+                System.out.println(
+				"Escolha uma das opções abaixo:\n\n" 
+						+ "1) Salvar as professoras\n"
+						+ "2) Salvar equipe de soldados");
+                
+						
+                
+                
+             do {
+
+			int escolhaMenu = sc.nextInt();
+
+			if (escolhaMenu== 1){
+				 			 
+				texto = " O agente parte rapidamente para o local do incêndio, chegando próximo das redondezas \n" 
+                                        +" se vê uma gigantesca fumaça saindo de um lugar que possivelmente é onde as professoras se localizam\n" 
+                                        +" Ao entrar no prédio em chamas, o agente corre rapidamente subindo as escadas e perguntando se havia alguém a\n"
+                                        +"então as professoras começaram a gritar:  “Socorro!! Alguém nos ajude!!\n"
+                                        +"O agente chega ao cômodo onde as professoras estavam e se depara com a seguinte situação.\n"
+                                        +" Três professoras estão amarradas em uma sala com cordas de cores \n" 
+                                        + "diferentes, Azul, Vermelho e Branco. Isso chama a atenção do agente,\n" 
+                                        +"mas ele continua avançando para desamarrá-las, após libertá-las\n" 
+                                        +"uma das professoras entrega um bilhete a mando de Hamid para o \n" 
+                                        +"agente. Ela diz:\"“Ele pediu para lhe entregar\n" 
+                                        +"Então as três professoras correm para fora do prédio em chama junto com o agentes";
+                                delay(texto);
+                        } else if(escolhaMenu==2){
+			
+				texto = " O agente parte rapidamente para o local informado por Hamid, chegando próximo, ele avista o letreiro vermelho\n"
+                                        +" e branco como havia dito"
+                                        +"Ao entrar no armazém, o agente identifica rapidamente uma bomba amarrada a estrutura do local, e os americanos" 
+                                        +"desacordados em seu interior. Ele tenta chamá-los, mas apenas um parece estar seu interior. Ele tenta chamá-los,"
+                                        + "mas apenas um parece estar ligeiramente acordado. Ele então, um por um, retira os americanos \n" 
+                                        + "do lugar rapidamente antes do timer da bomba zerar.\n"
+                                        + "O armazém explode e o agente fica assustado com aquela situação, ele liga para ajuda. Enquanto aguardava pela emergência um dos\n" 
+                                        + "soldados americanos entrega para o agente um papel timbrado e diz:\n"
+                                        + "“O terrorista, ele pediu para que eu entregasse a você caso viesse \n" 
+                                        + "aqui, ele também disse pra eu te dizer que ele está muito desapontado com a sua decisão” \n";
+                                delay(texto);
+                        }else{
+				System.out.println("Opção inválido.");
+				
+			}
+
+		} while (sair && jogar);
+		   
+             texto= " O agente abre o envelope que tem timbrado a bandeira dos estados unidos bem grande e em cores, ele lê a mensagem que diz: \n"
+                    + " 'Me encontre no ninho de ratos do seu país' e ao lado rabiscado um símbolo de um prédio grande. "
+                    + "O agente então imagina que o Hamid está falando sobre a embaixada, e parte às pressas para lá.";   
+
+                delay(texto);
                 
                 
                 // FIM DO DESAFIO 03
@@ -221,3 +281,4 @@ public class Game {
 		}
 	}
 }
+        
