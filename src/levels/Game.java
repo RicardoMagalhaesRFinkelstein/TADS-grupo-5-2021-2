@@ -332,6 +332,112 @@ public class Game {
 					
 				} while (dialogo51 == 1 || dialogo51 == 2 ||dialogo51 == 3 ||dialogo51 == 4 ||dialogo51 == 5 );
 				
+				int golpeRuim = 0;
+				texto = "Briga física entre o Agente e o vilão";
+				delay(texto);
+				
+				for (int i = 5; i > 0; i--) {
+					texto = "Selecione o golpe: ";
+					delay(texto);
+					int golpe = sc.nextInt();
+					
+					if (golpe == 1 || golpe == 2) {
+						texto = "Dano crítico ";
+						delay(texto);
+						i--;
+					} else if (golpe == 3 || golpe == 4) {
+						texto = "Dano normal ";
+						delay(texto);
+					} else {
+						texto = "Golpe falhou ";
+						delay(texto);
+						golpeRuim++;
+					}
+					
+					if(golpeRuim >= 2) {
+						texto = "VILÃO: foi bom brincar com você, mas como você não me impediu á tempo é hora de dizer adeus.";
+						delay(texto);
+						texto = "BOMBA EXPLODE ";
+						delay(texto);
+						fimDeJogo();
+					}
+				}
+				texto = "AGENTE OBSERVA O LOCAL, PROCURANDO PISTAS PARA DESARMAR A BOMBA ";
+				delay(texto);
+				for (int i = 0; i < 4; i++) {
+					texto = "Onde o agente olha á seguir?";
+					int escolhaAgente = sc.nextInt();
+					delay(texto);
+					
+					switch (escolhaAgente) {
+					case 1:
+						texto = "PISTA ÚTIL ";
+						delay(texto);
+						break;
+					
+					case 2:
+						texto = "PISTA ÚTIL ";
+						delay(texto);
+						break;
+						
+					case 3:
+						texto = "PISTA ÚTIL ";
+						delay(texto);
+						break;
+						
+					case 4:
+						texto = "PISTA INÚTIL ";
+						delay(texto);
+						break;
+						
+					case 5:
+						texto = "PISTA INÚTIL ";
+						delay(texto);
+						break;
+					case 6:
+						texto = "PISTA INÚTIL ";
+						delay(texto);
+						break;
+					case 7:
+						texto = "PISTA INÚTIL ";
+						delay(texto);
+						break;
+						
+						
+					default:
+						break;
+					}
+				}
+				
+				texto = "AGENTE PERCEBE QUE NÃO TEM MAIS TEMPO, CORRE PRA DESARMAR A BOMBA";
+				delay(texto);
+				
+				texto = "O QUE O AGENTE FARÁ PARA DESARMAR A BOMBA? ";
+				delay(texto);
+				
+				int desarmeDaBomba = sc.nextInt();
+				if (desarmeDaBomba == 1) {
+					texto = "PARABÉNS, AGENTE DESARMOU A BOMBA COM SUCESSO, GANHANDO O JOGO";
+					delay(texto);
+				} else if (desarmeDaBomba == 2) {
+					texto = "SEM EFEITO NENHUM, O AGENTE PERCEBE QUE SÓ TEM TEMPO PARA MAIS UMA TENTATIVA. ESCOLHA OUTRA OPÇÃO";
+					delay(texto);
+					desarmeDaBomba = sc.nextInt();
+					if (desarmeDaBomba == 1) {
+						texto = "PARABÉNS, AGENTE DESARMOU A BOMBA COM SUCESSO, GANHANDO O JOGO";
+						delay(texto);
+					} else {
+						texto = "AGENTE FALHOU. BOMBA EXPLODE";
+						delay(texto);
+						fimDeJogo();
+					}
+				} else {
+					texto = "AGENTE FALHOU. BOMBA EXPLODE";
+					delay(texto);
+					fimDeJogo();
+				}
+				
+				
 				
 }	
 		
