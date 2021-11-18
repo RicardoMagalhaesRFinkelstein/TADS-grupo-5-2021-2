@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Game {
-    static String nomeJogador;
+
     static String texto;
 
 
@@ -16,15 +16,9 @@ public class Game {
 		boolean sair = true;
 		boolean jogar = true;
 		String texto;
-                
-                texto= ">>>>>> 0 Agente A no Afeganistão<<<<<<<";
-                
-                System.out.println("Olá,  seja bem-vindo ao jogo!");
-                System.out.println("\n Seu papel é muito importante para nosso agente, você irá ajudá-lo. Qual seu nome?");
-                    nomeJogador = sc.next();
 
 		System.out.println(
-				nomeJogador+ "Escolha uma das opções abaixo:\n\n" 
+				"Escolha uma das opções abaixo:\n\n" 
 						+ "1) Instruções\n"
 						+ "2) Jogar\n" 
 						+ "3) Créditos\n" 
@@ -39,7 +33,7 @@ public class Game {
 			case 1:
 				 texto = ("Aguardando instruções...");
 				 delay(texto);
-				System.out.println(nomeJogador+" - Utilize os numeros identificados ao lado de cada sentença " 
+				System.out.println(" - Utilize os numeros identificados ao lado de cada sentença " 
 								+ "para definir sua escolha.\n"
 								+ " - Atenção, a história é importante para a conclusão do jogo.\n"
 								+ " - Suas escolhas possuem importância.");
@@ -154,7 +148,7 @@ public class Game {
 							+ "o rapaz pensa a respeito das suas decisões e passa a considerar os EUA invasores de seu país assim como seus familiares.");
 			break;
 		}
-		texto = " - Após a ação do jogador ";
+		texto = " - Após a ação do jogador - ";
 		delay(texto);
 		texto = "Voltando para o presente, o agente atende a ligação e escuta uma voz calma e conhecida...\n"
 				+ "Hamid diz – “Lembra de mim “professor”?” sarcasticamente\n"
@@ -172,82 +166,65 @@ public class Game {
                 
                 // INÍCIO DO DESAFIO 03
                 
-                texto= "Após a ligação, o agente ficou sem chão e não podia demostrar "
-                        + "o que estava acontecendo";
+                texto= "Após a ligação, o agente ficou sem saber o que fazer,/n"
+                        + "pensando em qual decisão tomar";
                 delay(texto);
                 
-                texto = "Agora" + nomeJogador +"vc vai ajudar nosso agente a salvar um grupo de professorar "
-                        + "e a equipe de soldados americanos";
+                texto = "salvar um grupo de professorar ou equipe de soldados americanos";
                 delay(texto);
                 
-              
-		texto = "O agente parte rapidamente para o local onde fica o armazém, chegando próximo das redondezas \n" 
-                         +"se vê uma gigantesca fumaça saindo de um lugar que possivelmente é onde as professoras se localizam\n" 
-                         +"Ao entrar no prédio em chamas, o agente corre rapidamente subindo as escadas e perguntando se havia alguém a\n"
-                         +"então as professoras começaram a gritar:  “Socorro!! Alguém nos ajude!!\n"
-                         +"O agente chega ao cômodo onde as professoras estavam e se depara com a seguinte situação.\n"
-                         +"As professoras estavam amarradas e assustadas gritando socorro, mas a porta que dava acesso onde elas estavam \n"
-                         +"estava presa com um bomba e para desativá-la Hamid deixou uma dica lembra quantas vezes quase eu perdi a vida no treinamento??";
-                 delay(texto);         
+                System.out.println(
+				"Escolha uma das opções abaixo:\n\n" 
+						+ "1) Salvar as professoras\n"
+						+ "2) Salvar equipe de soldados");
                 
-                 
-                 texto = "Agora " +nomeJogador+", vc vai ajudar nosso Agente a lembrar quantas vezes Hamid ´perdeu a vida através \n"
-                         +"da equação de segundo grau : x^2 -20=0";
+						
                 
-          
+                
+             do {
 
-            System.out.println(nomeJogador+" Escolha as alternativas abaixo:"
-                    + "a) 1.\n"
-                    + "b) 2.\n" //ALTERNATIVA CORRETA
-                    + "c) 3.\n"
-                    + "d) 4");
+			int escolhaMenu = sc.nextInt();
 
-            String alternativa = sc.next();
-            switch (alternativa) {
-                case "b":
-                case "B":
-                    System.out.println("\nVc acertou!!!!");
-                    break;
-                case "a":
-                case "A":
-                case "c":
-                case "C":
-                case "d":
-                case "D":
-                    System.out.println();
-                    System.out.println("***GAME-OVER***");
-                    System.exit(0);
-        
-                                
-                                
-                    texto = "Três professoras estão amarradas em uma sala com cordas de cores \n" 
-                           +"diferentes, Azul, Vermelho e Branco. Isso chama a atenção do agente,\n" 
-                           +"mas ele continua avançando para desamarrá-las, após libertá-las\n" 
-                           +"uma das professoras entrega um bilhete a mando de Hamid para o \n" 
-                           +"agente. Ela diz:\"“Ele pediu para lhe entregar\n" 
-                           +"Então as três professoras correm para fora do prédio em chama junto com o agente";
+			if (escolhaMenu== 1){
+				 			 
+				texto = " O agente parte rapidamente para o local do incêndio, chegando próximo das redondezas \n" 
+                                        +" se vê uma gigantesca fumaça saindo de um lugar que possivelmente é onde as professoras se localizam\n" 
+                                        +" Ao entrar no prédio em chamas, o agente corre rapidamente subindo as escadas e perguntando se havia alguém a\n"
+                                        +"então as professoras começaram a gritar:  “Socorro!! Alguém nos ajude!!\n"
+                                        +"O agente chega ao cômodo onde as professoras estavam e se depara com a seguinte situação.\n"
+                                        +" Três professoras estão amarradas em uma sala com cordas de cores \n" 
+                                        + "diferentes, Azul, Vermelho e Branco. Isso chama a atenção do agente,\n" 
+                                        +"mas ele continua avançando para desamarrá-las, após libertá-las\n" 
+                                        +"uma das professoras entrega um bilhete a mando de Hamid para o \n" 
+                                        +"agente. Ela diz:\"“Ele pediu para lhe entregar\n" 
+                                        +"Então as três professoras correm para fora do prédio em chama junto com o agentes";
                                 delay(texto);
-                        
-				texto = "O agente parte rapidamente para o local informado por Hamid, chegando próximo, ele avista o letreiro vermelho\n"
-                                        +"e branco como havia dito"
+                        } else if(escolhaMenu==2){
+			
+				texto = " O agente parte rapidamente para o local informado por Hamid, chegando próximo, ele avista o letreiro vermelho\n"
+                                        +" e branco como havia dito"
                                         +"Ao entrar no armazém, o agente identifica rapidamente uma bomba amarrada a estrutura do local, e os americanos" 
                                         +"desacordados em seu interior. Ele tenta chamá-los, mas apenas um parece estar seu interior. Ele tenta chamá-los,"
-                                        +"mas apenas um parece estar ligeiramente acordado. Ele então, um por um, retira os americanos \n" 
-                                        +"do lugar rapidamente antes do timer da bomba zerar.\n"
-                                        +"O armazém explode e o agente fica assustado com aquela situação, ele liga para ajuda. Enquanto aguardava pela emergência um dos\n" 
-                                        +"soldados americanos entrega para o agente um papel timbrado e diz:\n"
-                                        +"“O terrorista, ele pediu para que eu entregasse a você caso viesse \n" 
-                                        +"aqui, ele também disse pra eu te dizer que ele está muito desapontado com a sua decisão” \n";
+                                        + "mas apenas um parece estar ligeiramente acordado. Ele então, um por um, retira os americanos \n" 
+                                        + "do lugar rapidamente antes do timer da bomba zerar.\n"
+                                        + "O armazém explode e o agente fica assustado com aquela situação, ele liga para ajuda. Enquanto aguardava pela emergência um dos\n" 
+                                        + "soldados americanos entrega para o agente um papel timbrado e diz:\n"
+                                        + "“O terrorista, ele pediu para que eu entregasse a você caso viesse \n" 
+                                        + "aqui, ele também disse pra eu te dizer que ele está muito desapontado com a sua decisão” \n";
                                 delay(texto);
-                        
+                        }else{
+				System.out.println("Opção inválido.");
+				
+			}
+
+		} while (sair && jogar);
 		   
              texto= " O agente abre o envelope que tem timbrado a bandeira dos estados unidos bem grande e em cores, ele lê a mensagem que diz: \n"
-                    +"'Me encontre no ninho de ratos do seu país' e ao lado rabiscado um símbolo de um prédio grande. "
-                    +"O agente então imagina que o Hamid está falando sobre a embaixada, e parte às pressas para lá.";   
+                    + " 'Me encontre no ninho de ratos do seu país' e ao lado rabiscado um símbolo de um prédio grande. "
+                    + "O agente então imagina que o Hamid está falando sobre a embaixada, e parte às pressas para lá.";   
 
                 delay(texto);
                 
-            texto = "=========Fim do Desafio Três============";
                 
                 // FIM DO DESAFIO 03
 		
