@@ -294,14 +294,28 @@ public class Game {
 		
 	
 
-	static void delay(String TextoFuncao) {
-		int tamanhoDelay = TextoFuncao.length();
-		System.out.println(TextoFuncao);
-		try {
-			TimeUnit.SECONDS.sleep(tamanhoDelay / 15);
-		} catch (InterruptedException ie) {
-			Thread.currentThread().interrupt();
-		}
-	}
+            static void fimDeJogo() {
+        		System.out.println(" _______ _______ _______ _______   _______ ___ ___ _______ ______ \r\n"
+        				+ "|     __|   _   |   |   |    ___| |       |   |   |    ___|   __ \\\r\n"
+        				+ "|    |  |       |       |    ___| |   -   |   |   |    ___|      <\r\n"
+        				+ "|_______|___|___|__|_|__|_______| |_______|\\_____/|_______|___|__|\r\n"
+        				+ "                                                                  ");
+        		System.out.println( "CRÉDITOS");
+        		sair();
+        	}
+        	
+        	static void sair() {
+        		System.exit(0);
+        	}
+
+        	static void delay(String TextoFuncao) {
+        		int tamanhoDelay = TextoFuncao.length();
+        		System.out.println(TextoFuncao);
+        		try {
+        			TimeUnit.SECONDS.sleep(tamanhoDelay / 15);
+        		} catch (InterruptedException ie) {
+        			Thread.currentThread().interrupt();
+        		}
+        	}
 }
         
