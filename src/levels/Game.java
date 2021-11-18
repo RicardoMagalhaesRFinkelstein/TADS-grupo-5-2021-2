@@ -289,7 +289,50 @@ public class Game {
 		delay(texto);
 		
 		//FIM DO DESAFIO 04
-		sc.close();
+		//INICIO DESAFIO 5
+				int dialogo51= 0;
+				
+				do {
+					//int dialogoLocal = 1;
+					texto = "Inicio da conversa do Agente com o vilão";
+					delay(texto);
+					dialogo51 = sc.nextInt();
+					
+					switch (dialogo51) {
+					case 1:
+					
+						texto = "Dialogo 1";
+						delay(texto);
+					
+						
+					case 2:
+						texto = "Dialogo 2";
+						delay(texto);
+						break;
+						
+					case 3:
+						texto = "Dialogo 3";
+						delay(texto);
+						break;
+						
+					case 4:
+						texto = "Dialogo 4";
+						delay(texto);
+						break;
+						
+					case 5:
+						texto = "Dialogo 5";
+						delay(texto);
+						break;
+
+					
+					}
+					
+
+					
+				} while (dialogo51 == 1 || dialogo51 == 2 ||dialogo51 == 3 ||dialogo51 == 4 ||dialogo51 == 5 );
+				
+				
 }	
 		
 	
