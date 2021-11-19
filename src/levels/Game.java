@@ -8,7 +8,7 @@ public class Game {
     static String texto;
     static String nomeJogador;
 
-	public static void main(String[] args) {
+		public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
 
@@ -204,37 +204,17 @@ public class Game {
             
             
             
-            int i=0;
-            do {
-	        	
 	        	System.out.printf(nomeJogador, "Voce possui apenas uma chance");
             
-            char alternativa = sc.next().charAt(0);
-            switch (alternativa) {
-                case 'a':
-                case 'A':
-                case 'c':
-                case 'C':
-                case 'd':
-                case 'D':
-                    System.out.println( "Vc errou!!!! GameOver");
-                    break;
-                case 'b':
-                case 'B':
-                    System.out.println("\nVc acertou!!!!Conseguiu salvar as professoras");
-                    break;
-                    default:
-	                System.out.printf("Opção inválida!!!");
-	                break;
-                        
+            char alternativa = sc.next().toLowerCase().charAt(0);
+            
+            if(alternativa == 'b') {
+            	System.out.println("\nVocê acertou!!!!Conseguiu salvar as professoras");            	
+            } else {
+            	System.out.println( "Vc errou!!!! GameOver");
+            	sair();
             }
-                i++;	        
-	        }while( i ==1); 
-                sc.close();
-        
-
-  
-                                
+            
                                 
                     texto = "Três professoras estão amarradas em uma sala com cordas de cores \n" 
                            +"diferentes, Azul, Vermelho e Branco. Isso chama a atenção do agente,\n" 
@@ -362,14 +342,14 @@ public class Game {
 					
 
 					
-				} while (dialogo51 == 1 || dialogo51 == 2 ||dialogo51 == 3 ||dialogo51 == 4 ||dialogo51 == 5 );
+				} while (dialogo51 == 0 || dialogo51 == 1 || dialogo51 == 2 ||dialogo51 == 3 ||dialogo51 == 4 ||dialogo51 == 5 );
 				
 				int golpeRuim = 0;
 				texto = "Briga física entre o Agente e o vilão";
 				delay(texto);
 				
 				for (int i = 5; i > 0; i--) {
-					texto = "Selecione o golpe: ";
+					texto = "Selecione o golpe: 1 a 6 ";
 					delay(texto);
 					int golpe = sc.nextInt();
 					
@@ -396,10 +376,10 @@ public class Game {
 				}
 				texto = "AGENTE OBSERVA O LOCAL, PROCURANDO PISTAS PARA DESARMAR A BOMBA ";
 				delay(texto);
-				for (int i = 0; i < 4; i++) {
-					texto = "Onde o agente olha á seguir?";
-					int escolhaAgente = sc.nextInt();
+				for (int j = 0; j < 4; j++) {
+					texto = "Onde o agente olha á seguir? Escolha 1 a 7";
 					delay(texto);
+					int escolhaAgente = sc.nextInt();
 					
 					switch (escolhaAgente) {
 					case 1:
@@ -472,8 +452,7 @@ public class Game {
 				
 				
 }	
-		
-        	
+		        	
 
             static void fimDeJogo() {
         		System.out.println(" _______ _______ _______ _______   _______ ___ ___ _______ ______ \r\n"
