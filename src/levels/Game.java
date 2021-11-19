@@ -19,8 +19,9 @@ public class Game {
                 
                  texto= ">>>>>> 0 Agente A no Afeganistão<<<<<<<";
                 
-                System.out.println("Olá,  seja bem-vindo ao jogo!");
-                System.out.println("\n Seu papel é muito importante para nosso agente, você irá ajudá-lo. Qual seu nome?");
+                System.out.println("Olá,  seja bem-vindo ao jogo!\n");
+                System.out.println("Seu papel é muito importante, vc será o nosso agente, "
+                                 + "Qual seu nome?");
                     nomeJogador = sc.next();
 
 		System.out.println(
@@ -131,7 +132,7 @@ public class Game {
 				+ "\n"
 				+ "Em uma batida dos Estados Unidos em um vilarejo, eles suspeitaram que uma pessoa que tinha ligação com o grupo terrorista local a Isis-K, porém o rapaz conhecia aquela pessoa e a considerava alguém inocente.";
 		delay(texto);
-		texto = " -     AÇÃO     - ";
+		System.out.println(nomeJogador+ " Escolha uma das alternativas: ");
 		delay(texto);
 		texto = "1 - Ajudar o senhor? ";
 		delay(texto);
@@ -175,7 +176,7 @@ public class Game {
                         + "o que estava acontecendo";
                 delay(texto);
                 
-                texto = "Agora" + nomeJogador +"vc vai ajudar nosso agente a salvar um grupo de professorar "
+                texto = "Agora" + nomeJogador +" vc vai ajudar nosso agente a salvar um grupo de professorar "
                         + "e a equipe de soldados americanos";
                 delay(texto);
                 
@@ -186,36 +187,37 @@ public class Game {
                          +"então as professoras começaram a gritar:  “Socorro!! Alguém nos ajude!!\n"
                          +"O agente chega ao cômodo onde as professoras estavam e se depara com a seguinte situação.\n"
                          +"As professoras estavam amarradas e assustadas gritando socorro, mas a porta que dava acesso onde elas estavam \n"
-                         +"estava presa com um bomba e para desativá-la Hamid deixou uma dica lembra quantas vezes quase eu perdi a vida no treinamento??";
+                         +"estava presa com um bomba e para desativá-la Hamid deixou uma dica lembra quantas vezes quase eu perdi a vida no treinamento??\n";
                  delay(texto);         
                 
                  
-                 texto = "Agora " +nomeJogador+", vc vai ajudar nosso Agente a lembrar quantas vezes Hamid ´perdeu a vida através \n"
-                         +"da equação de segundo grau : x^2 -20=0";
-                
-          
-
+                 System.out.println("Agora " +nomeJogador+", para lembrar quantas vezes Hamid "
+                                  +"quase´perdeu a vida nos treinamentos em \n"
+                                  +"resolva a equação de segundo grau : 5x^2 -20=0");
+              
             System.out.println(nomeJogador+" Escolha as alternativas abaixo:"
                     + "a) 1.\n"
                     + "b) 2.\n" //ALTERNATIVA CORRETA
                     + "c) 3.\n"
                     + "d) 4");
 
-            String alternativa = sc.next();
+            char alternativa = sc.next().charAt(0);
             switch (alternativa) {
-                case "b":
-                case "B":
+                case 'b':
+                case 'B':
                     System.out.println("\nVc acertou!!!!Conseguiu salvar as professoras");
                     break;
-                case "a":
-                case "A":
-                case "c":
-                case "C":
-                case "d":
-                case "D":
-                    System.out.println();
+                case 'a':
+                case 'A':
+                case 'c':
+                case 'C':
+                case 'd':
+                case 'D':
+                    System.out.println( "Vc errou");
                     System.out.println("***GAME-OVER***");
-                    System.exit(0);
+                    
+                
+            }           
         
                                 
                                 
@@ -234,15 +236,15 @@ public class Game {
                            +"A bomba será acionada  pela mudança de peso...se tirar um soldado a bomba explode  \n" 
                            +"o time da bomba esta acionada e só faltam 5 minutos para a bomba explodir.\n";
                     
-                    texto= "Agora"+nomeJogador+"ajude o Agente A desarmar a bomba";
+                    System.out.println("Agora "+nomeJogador+" ajude o Agente A desarmar a bomba");
                     
                 Random gerador = new Random();  
-                int numeroAleatorio = gerador.nextInt(10);
+                int numeroAleatorio = gerador.nextInt(5);
                 int palpite = 1;
-                int tentativas = 3;
+                int tentativas = 2;
                 
                 while(tentativas>=0 ){
-                 System.out.println("Chute um numero de 1 a 10");
+                 System.out.println("Chute um numero de 1 a 5");
                  palpite = sc.nextInt();
             
                      if (numeroAleatorio==palpite){
@@ -452,7 +454,7 @@ public class Game {
 				
 }	
 		
-	
+        	
 
             static void fimDeJogo() {
         		System.out.println(" _______ _______ _______ _______   _______ ___ ___ _______ ______ \r\n"
@@ -472,7 +474,7 @@ public class Game {
         		int tamanhoDelay = TextoFuncao.length();
         		System.out.println(TextoFuncao);
         		try {
-        			TimeUnit.SECONDS.sleep(tamanhoDelay / 15);
+        			TimeUnit.SECONDS.sleep(tamanhoDelay /50);
         		} catch (InterruptedException ie) {
         			Thread.currentThread().interrupt();
         		}
