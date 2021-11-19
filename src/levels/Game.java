@@ -195,30 +195,44 @@ public class Game {
                                   +"quase´perdeu a vida nos treinamentos em \n"
                                   +"resolva a equação de segundo grau : 5x^2 -20=0");
               
-            System.out.println(nomeJogador+" Escolha as alternativas abaixo:"
+            System.out.println(nomeJogador+" Escolha as alternativas abaixo: \n"
                     + "a) 1.\n"
                     + "b) 2.\n" //ALTERNATIVA CORRETA
                     + "c) 3.\n"
                     + "d) 4");
-
+            
+            
+            
+            int i=0;
+            do {
+	        	
+	        	System.out.printf(nomeJogador, "Voce possui apenas uma chance");
+            
             char alternativa = sc.next().charAt(0);
             switch (alternativa) {
-                case 'b':
-                case 'B':
-                    System.out.println("\nVc acertou!!!!Conseguiu salvar as professoras");
-                    break;
                 case 'a':
                 case 'A':
                 case 'c':
                 case 'C':
                 case 'd':
                 case 'D':
-                    System.out.println( "Vc errou");
-                    System.out.println("***GAME-OVER***");
-                    
-                
-            }           
+                    System.out.println( "Vc errou!!!! GameOver");
+                    break;
+                case 'b':
+                case 'B':
+                    System.out.println("\nVc acertou!!!!Conseguiu salvar as professoras");
+                    break;
+                    default:
+	                System.out.printf("Opção inválida!!!");
+	                break;
+                        
+            }
+                i++;	        
+	        }while( i ==1); 
+                sc.close();
         
+
+  
                                 
                                 
                     texto = "Três professoras estão amarradas em uma sala com cordas de cores \n" 
@@ -239,26 +253,30 @@ public class Game {
                     System.out.println("Agora "+nomeJogador+" ajude o Agente A desarmar a bomba");
                     
                 Random gerador = new Random();  
-                int numeroAleatorio = gerador.nextInt(5);
+                boolean acertou = false;
+                int numeroAleatorio = gerador.nextInt(10);
                 int palpite = 1;
-                int tentativas = 2;
+                int tentativas = 3;
                 
-                while(tentativas>=0 ){
-                 System.out.println("Chute um numero de 1 a 5");
+                while(tentativas>=0 && acertou==false){
+                 System.out.println("Chute um numero de 1 a 10");
                  palpite = sc.nextInt();
             
                      if (numeroAleatorio==palpite){
                          System.out.println("Parabéns!!!!!Vc salvou os soldados americanos!");
+                         acertou=true;
+                    }else if(palpite<numeroAleatorio) {  
+                         System.out.println("Este número é menor que o número, vc tem "+tentativas--+" chances restanates");
                      
                     } else{
-                         System.out.println("Errou, vc tem mais "+tentativas-- +" chances");
+                         System.out.println("Este número é maior que o numero, vc tem "+tentativas--+" chances restanates");
              
                          }if(tentativas== -1){
                           System.out.println("Acabou suas chances. Game over!!!!");
+                         }    
+                         
+                }
                 
-    } 
-            
- }   
             
                 
                 
