@@ -18,7 +18,7 @@ public class Game {
 		String texto;
                 
                  
-                texto = "?????? ? ?? ???????????";
+                System.out.println ("O AGENTE A NO AFEGANISTÃO"); 
              
                 System.out.println("Olá,  seja bem-vindo ao jogo!\n");
                 System.out.println("Seu papel é muito importante, vc será o nosso agente, "
@@ -183,20 +183,26 @@ public class Game {
                 
               
 		texto = "O agente parte rapidamente para o local onde fica o armazém, chegando próximo das redondezas \n" 
-                         +"se vê uma gigantesca fumaça saindo de um lugar que possivelmente é onde as professoras se localizam\n" 
-                         +"Ao entrar no prédio em chamas, o agente corre rapidamente subindo as escadas e perguntando se havia alguém a\n"
-                         +"então as professoras começaram a gritar:  “Socorro!! Alguém nos ajude!!\n"
-                         +"O agente chega ao cômodo onde as professoras estavam e se depara com a seguinte situação.\n"
-                         +"As professoras estavam amarradas e assustadas gritando socorro, mas a porta que dava acesso onde elas estavam \n"
-                         +"estava presa com um bomba e para desativá-la Hamid deixou uma dica lembra quantas vezes quase eu perdi a vida no treinamento??\n";
-                 delay(texto);         
+                         +"se vê uma gigantesca fumaça saindo de um lugar que possivelmente é onde as professoras se localizam\n";
+                         delay (texto);
                 
+                texto =   "Ao entrar no prédio em chamas, o agente corre rapidamente subindo as escadas e perguntando se havia alguém a\n"
+                         +"então as professoras começaram a gritar:  “Socorro!! Alguém nos ajude!!\n";
+                         delay (texto);
+                
+                texto =  "O agente chega ao cômodo onde as professoras estavam e se depara com a seguinte situação.\n"
+                         +"As professoras estavam amarradas e assustadas gritando socorro, mas a porta que dava acesso onde elas estavam \n";
+                         delay (texto);
+                         
+                texto =  "estava presa com um bomba e para desativá-la Hamid deixou uma dica lembra quantas vezes quase eu perdi a vida no treinamento??\n";
+                         delay(texto);         
+                 
                  
                  System.out.println("Agora " +nomeJogador+", para lembrar quantas vezes Hamid "
                                   +"quase´perdeu a vida nos treinamentos em \n"
                                   +"resolva a equação de segundo grau : 5x^2 -20=0");
               
-            System.out.println(nomeJogador+" Escolha as alternativas abaixo: \n"
+            System.out.println(nomeJogador+" Escolha uma letra das alternativas abaixo: \n"
                     + "a) 1.\n"
                     + "b) 2.\n" //ALTERNATIVA CORRETA
                     + "c) 3.\n"
@@ -217,20 +223,26 @@ public class Game {
             
                                 
                     texto = "Três professoras estão amarradas em uma sala com cordas de cores \n" 
-                           +"diferentes, Azul, Vermelho e Branco. Isso chama a atenção do agente,\n" 
-                           +"mas ele continua avançando para desamarrá-las, após libertá-las\n" 
-                           +"uma das professoras entrega um bilhete a mando de Hamid para o \n" 
-                           +"agente. Ela diz:\"“Ele pediu para lhe entregar\n" 
+                           +"diferentes, Azul, Vermelho e Branco. Isso chama a atenção do agente,\n"; 
+                            delay (texto);
+                            
+                    texto = "mas ele continua avançando para desamarrá-las, após libertá-las\n" 
+                           +"uma das professoras entrega um bilhete a mando de Hamid para o \n"; 
+                            delay (texto);
+                            
+                    texto = "agente. Ela diz:\"“Ele pediu para lhe entregar\n" 
                            +"Então as três professoras correm para fora do prédio em chama junto com o agente";
-                                delay(texto);
+                            delay(texto);
                         
-                    texto = "No bilhete entregue pelas professoras Hamid mostram a localização da equipe de soldados\n"
-                           +"era uma armazém próximo do armazém onde estavam as professoras, mas este não estva em chamas"
-                           +"Ao entrar no armazém, o agente identifica rapidamente uma bomba embaixo da plataforma onde estava sua equipe" 
-                           +"Os soldados estavam desacordados em seu interior. Ele tenta chamá-los, mas apenas um parece estar ciente"
-                           +"A bomba será acionada  pela mudança de peso...se tirar um soldado a bomba explode  \n" 
+                    texto ="No bilhete entregue pelas professoras Hamid mostram a localização da equipe de soldados\n"
+                           +"era uma armazém próximo do armazém onde estavam as professoras, mas este não estva em chamas";
+                           delay(texto);
+                    texto = "Ao entrar no armazém, o agente identifica rapidamente uma bomba embaixo da plataforma onde estava sua equipe" 
+                           +"Os soldados estavam desacordados em seu interior. Ele tenta chamá-los, mas apenas um parece estar ciente";
+                           delay(texto);
+                    texto = "A bomba será acionada  pela mudança de peso...se tirar um soldado a bomba explode  \n" 
                            +"o time da bomba esta acionada e só faltam 5 minutos para a bomba explodir.\n";
-                    
+                           delay(texto);
                     System.out.println("Agora "+nomeJogador+" ajude o Agente A desarmar a bomba");
                     
                 Random gerador = new Random();  
@@ -247,10 +259,10 @@ public class Game {
                          System.out.println("Parabéns!!!!!Vc salvou os soldados americanos!");
                          acertou=true;
                     }else if(palpite<numeroAleatorio) {  
-                         System.out.println("Este número é menor que o número, vc tem "+tentativas--+" chances restanates");
+                         System.out.println("Seu palpite é menor que o número aleatório, vc tem "+tentativas--+" chances restanates");
                      
                     } else{
-                         System.out.println("Este número é maior que o numero, vc tem "+tentativas--+" chances restanates");
+                         System.out.println("Seu palpite é maior que o numero aleatório, vc tem "+tentativas--+" chances restanates");
              
                          }if(tentativas== -1){
                           System.out.println("Acabou suas chances. Game over!!!!");
