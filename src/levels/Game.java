@@ -21,9 +21,8 @@ public class Game {
                 System.out.println ("O AGENTE A NO AFEGANISTÃO"); 
                 
                 System.out.println("Olá,  seja bem-vindo ao jogo!\n");
-                System.out.println("Seu papel é muito importante, vc será o nosso agente, "
-                                 + "Qual seu nome?");
-                    nomeJogador = sc.next();
+                System.out.println("Seu papel é muito importante, vc será o nosso agente");
+                 System.out.println("Qual seu nome????");        
 
 		System.out.println(
 				nomeJogador+" Escolha uma das opções abaixo:\n\n" 
@@ -133,7 +132,7 @@ public class Game {
 				+ "\n"
 				+ "Em uma batida dos Estados Unidos em um vilarejo, eles suspeitaram que uma pessoa que tinha ligação com o grupo terrorista local a Isis-K, porém o rapaz conhecia aquela pessoa e a considerava alguém inocente.";
 		delay(texto);
-		System.out.println(nomeJogador+ " Escolha uma das alternativas: ");
+		System.out.println(" Escolha uma das alternativas: ");
 		delay(texto);
 		texto = "1 - Ajudar o senhor? ";
 		delay(texto);
@@ -165,26 +164,26 @@ public class Game {
 				+ "O agente responde preocupado - “ONDE ESTÁ MINHA EQUIPE ??!!”\n"
 				+ "Hamid revela – “Tenho duas localizações para te passar, ainda tenho um pouco de esperança de que você seja uma pessoa boa então quero ver que atitude o senhor irá tomar professor”\n"
 				+ "“Tem um armazém localizado ao sul do aeroporto com uma fachada vermelha e branca, vá para lá se quiser encontrar os seus amigos, agora, caso você ainda seja a pessoa boa que eu costumava a conhecer,\n"
-				+ "um grupo de professoras estão presas em um prédio e chamas ao oeste de sua posição, apenas siga a fumaça. Agora, elas são pessoas inocentes, diferente dos seus amiguinhos americanos, que assassinaram um homem a sangue frio tempos atrás.”";
+				+ "um grupo de professoras estão presas em um prédio e chamas ao oeste de sua posição, apenas siga a fumaça. Agora, elas são pessoas inocentes, diferente dos seus amiguinhos americanos, que assassinaram um homem a sangue frio tempos atrás.\n\n”";
 		delay(texto);
-		texto = " - Fim do desafio 2 - ";
+		texto = " - Fim do desafio 2 - \n\n";
 		delay(texto);
 
 		// FINAL DO DESAFIO 02
                 
                 // INÍCIO DO DESAFIO 03
-                System.out.println(" Parabéns!!!!" + nomeJogador + " Você chegou ao desafio três!!!!!\n");
+                System.out.println(" Parabéns!!!! " + nomeJogador + " Você chegou ao desafio três!!!!!\n");
                        
                
                
-                texto = "Agora" + nomeJogador +" vc precisa salvar os reféns";
+                texto = "Agora " + nomeJogador +" vc precisa salvar os reféns.";
                         delay(texto);
                 
-                texto = "Nesta parte do jogo terão muitos desafios com números, " +nomeJogador+ ", está pronto";        
+                System.out.println ("Nesta parte do jogo terão muitos desafios com números, " +nomeJogador+ ", vc está pronto????");        
                         
                 int escolha;
             
-                System.out.println("\n [1] - Sim \n, [2] - Não");
+                System.out.println("\n[1] - Sim \n[2] - Não");
                 escolha = sc.nextInt();
                    if(escolha ==1){
                        System.out.println("Vamos ao desafio!!!");
@@ -270,10 +269,10 @@ public class Game {
                          System.out.println("Parabéns!!!!!Vc salvou os soldados americanos!");
                          acertou=true;
                     }else if(palpite<numeroAleatorio) {  
-                         System.out.println("Seu palpite é menor que o número escolhido, então aumente seu número, vc tem "+tentativas--+" chances restanates");
+                         System.out.println("Seu palpite é menor que o número escolhido, então aumente seu número, vc tem "+tentativas--+" chances restantes");
                      
                     } else{
-                         System.out.println("Seu palpite é maior que o numero escolhido, então diminua seu número, vc tem "+tentativas--+" chances restanates");
+                         System.out.println("Seu palpite é maior que o numero escolhido, então diminua seu número, vc tem "+tentativas--+" chances restantes");
              
                          }if(tentativas== -1){
                           System.out.println("Acabou suas chances. Game over!!!!");
