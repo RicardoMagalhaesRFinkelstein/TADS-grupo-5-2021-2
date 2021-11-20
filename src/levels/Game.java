@@ -87,7 +87,7 @@ public class Game {
 
 			delay(texto);
 			texto = "Após desastres no Afeganistão e o Talibã tomar o poder do país, foi designado um agente da CIA para ir ao Afeganistão e ajudar na evacuação dos soldados americanos no aeroporto de Cabul no Afeganistão.\n"
-					+ "Chegando no aeroporto e após conseguir realizar a evacuação dos soldados o/a agente percebeu que estava faltando um grupo de soldados e sabendo que teria que dar uma explicação aos EUA sobre isso \nele então tem que decidir se vai a procura dos soldados perdidos ou não...";
+		              + "Chegando no aeroporto e após conseguir realizar a evacuação dos soldados o/a agente percebeu que estava faltando um grupo de soldados e sabendo que teria que dar uma explicação aos EUA sobre isso \nele então tem que decidir se vai a procura dos soldados perdidos ou não...";
 			delay(texto);
 			texto = " -     AÇÃO     - ";
 			delay(texto);
@@ -173,14 +173,14 @@ public class Game {
 		// FINAL DO DESAFIO 02
                 
                 // INÍCIO DO DESAFIO 03
-                System.out.println(" Parabéns!!!!" + nomeJogador + "Você chegou ao desafio três!!!!!\n");
+                System.out.println(" Parabéns!!!!" + nomeJogador + " Você chegou ao desafio três!!!!!\n");
                        
                
                
                 texto = "Agora" + nomeJogador +" vc precisa salvar os reféns";
                         delay(texto);
                 
-                texto = "Nesta´parte do jogo terão muitos desafios com números, " +nomeJogador+ ", vc está pronto";        
+                texto = "Nesta parte do jogo terão muitos desafios com números, " +nomeJogador+ ", está pronto";        
                         
                 int escolha;
             
@@ -254,7 +254,7 @@ public class Game {
                            +"o time da bomba esta acionada e só faltam 5 minutos para a bomba explodir.\n\n\n";
                            delay(texto);
                            
-                    System.out.println("Agora "+nomeJogador+" ajude o Agente A desarmar a bomba");
+                    System.out.println("Agora "+nomeJogador+" ajude a desarmar a bomba");
                     
                 Random gerador = new Random();  
                 boolean acertou = false;
@@ -286,18 +286,20 @@ public class Game {
                         
                  texto = "Um dos soldados entrega uma chave para o Agente e ele percebe que esta chave é de um armário no"
                         +"no aeroporto. Soldado avisa que se refere a próxima dica, onde será o novo atentado";
-                
+                        delay(texto);
+                        
                  texto = "Chegando ao Aeroporto abre o armário e dentro dele estava uma caixa, mas para abrí-la "
                         +"irá precisar de uma sennha de quatro dígitos. \n \n \n " ;
-                
-                 texto=  "Resolva a equação de primeiro grau : 2x- 6700= -x -2x+ 4525 ";
-                                  delay(texto);
+                        delay(texto);
+                        
+                 texto=  "Resolva a equação de primeiro grau : 2x- 6700 = x -4x + 4525 ";
+                          delay(texto);
                  
                  
                  System.out.println(nomeJogador+" Vc só tem uma chance, escolha uma letra para as alternativas abaixo: \n"
                     + "a) 2241.\n"
-                    + "b) 2240.\n" //ALTERNATIVA CORRETA
-                    + "c) 2245.\n"
+                    + "b) 2240.\n" 
+                    + "c) 2245.\n"//ALTERNATIVA CORRETA
                     + "d) 2250");
             
                         
@@ -311,11 +313,11 @@ public class Game {
             }
             
                 texto = "Com a senha o Agente abre a caixa e pega um envelope e papel timbrado da embaixada americana "
-                        +"o bilhete dizia 'Me encontre no ninho de ratos do seu país'";
+                       +"o bilhete dizia 'Me encontre no ninho de ratos do seu país'";
                         delay (texto);
                         
-                 texto = " O agente também lembra que as cordas que amaarravam as professoras tinham as cores da banceira americana "
-                        +" e corre para Embaixada. \n\n";
+                texto = "O agente também lembra que as cordas que amarravam as professoras tinham as cores da bandeira americana "
+                       +"e corre para Embaixada. \n\n";
                         delay (texto);
             
                 
