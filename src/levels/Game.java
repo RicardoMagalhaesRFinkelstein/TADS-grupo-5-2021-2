@@ -19,7 +19,7 @@ public class Game {
                 
                  
                 System.out.println ("O AGENTE A NO AFEGANISTÃO"); 
-             
+                
                 System.out.println("Olá,  seja bem-vindo ao jogo!\n");
                 System.out.println("Seu papel é muito importante, vc será o nosso agente, "
                                  + "Qual seu nome?");
@@ -173,45 +173,55 @@ public class Game {
 		// FINAL DO DESAFIO 02
                 
                 // INÍCIO DO DESAFIO 03
-                texto= "Após a ligação, o agente ficou sem chão e não podia demostrar "
-                        + "o que estava acontecendo";
-                delay(texto);
+                System.out.println(" Parabéns!!!!" + nomeJogador + "Você chegou ao desafio três!!!!!\n");
+                       
+               
+               
+                texto = "Agora" + nomeJogador +" vc precisa salvar os reféns";
+                        delay(texto);
                 
-                texto = "Agora" + nomeJogador +" vc vai ajudar nosso agente a salvar um grupo de professorar "
-                        + "e a equipe de soldados americanos";
-                delay(texto);
+                texto = "Nesta´parte do jogo terão muitos desafios com números, " +nomeJogador+ ", vc está pronto";        
+                        
+                int escolha;
+            
+                System.out.println("\n [1] - Sim \n, [2] - Não");
+                escolha = sc.nextInt();
+                   if(escolha ==1){
+                       System.out.println("Vamos ao desafio!!!");
+                   }else{
+                       sair();
+                   }   
                 
               
 		texto = "O agente parte rapidamente para o local onde fica o armazém, chegando próximo das redondezas \n" 
-                         +"se vê uma gigantesca fumaça saindo de um lugar que possivelmente é onde as professoras se localizam\n";
+                       +"se vê uma gigantesca fumaça saindo de um lugar que possivelmente é onde as professoras se encontram\n";
                          delay (texto);
                 
                 texto =   "Ao entrar no prédio em chamas, o agente corre rapidamente subindo as escadas e perguntando se havia alguém a\n"
                          +"então as professoras começaram a gritar:  “Socorro!! Alguém nos ajude!!\n";
                          delay (texto);
                 
-                texto =  "O agente chega ao cômodo onde as professoras estavam e se depara com a seguinte situação.\n"
-                         +"As professoras estavam amarradas e assustadas gritando socorro, mas a porta que dava acesso onde elas estavam \n";
+                texto =  "O agente chega no fundo do armazém onde as professoras estavam e se depara com a seguinte situação.\n"
+                        +"As professoras estavam amarradas e assustadas gritando socorro, mas a porta que dava acesso onde elas estavam \n";
                          delay (texto);
                          
-                texto =  "estava presa com um bomba e para desativá-la Hamid deixou uma dica lembra quantas vezes quase eu perdi a vida no treinamento??\n";
+                texto =  "estava presa com um bomba e para desativá-la Hamid deixou uma dica 'lembra quantas vezes que quase perdi a vida no treinamento'??\n";
                          delay(texto);         
                  
                  
-                 System.out.println("Agora " +nomeJogador+", para lembrar quantas vezes Hamid "
-                                  +"quase´perdeu a vida nos treinamentos em \n"
-                                  +"resolva a equação de segundo grau : 5x^2 -20=0");
-              
-            System.out.println(nomeJogador+" Escolha uma letra das alternativas abaixo: \n"
+                System.out.println("Agora " +nomeJogador+", para lembrar quantas vezes Hamid "
+                                  +"quase´perdeu a vida nos treinamentos. \n\n\n");
+                        
+                         texto=  "Resolva a equação de segundo grau : 5x²-20=0";
+                                  delay(texto);
+                                  
+            System.out.println(nomeJogador+" Vc só tem uma chance, escolha uma letra para as alternativas abaixo: \n"
                     + "a) 1.\n"
                     + "b) 2.\n" //ALTERNATIVA CORRETA
                     + "c) 3.\n"
                     + "d) 4");
             
-            
-            
-	        	System.out.printf(nomeJogador, "Voce possui apenas uma chance");
-            
+                        
             char alternativa = sc.next().toLowerCase().charAt(0);
             
             if(alternativa == 'b') {
@@ -222,8 +232,8 @@ public class Game {
             }
             
                                 
-                    texto = "Três professoras estão amarradas em uma sala com cordas de cores \n" 
-                           +"diferentes, Azul, Vermelho e Branco. Isso chama a atenção do agente,\n"; 
+                    texto = "Três professoras estão amarradas em  com cordas de cores \n" 
+                           +"diferentes, Azul, Vermelho e Branco. Isso chama a atenção do agente cores da bandeira americana,\n"; 
                             delay (texto);
                             
                     texto = "mas ele continua avançando para desamarrá-las, após libertá-las\n" 
@@ -237,12 +247,13 @@ public class Game {
                     texto ="No bilhete entregue pelas professoras Hamid mostram a localização da equipe de soldados\n"
                            +"era uma armazém próximo do armazém onde estavam as professoras, mas este não estva em chamas";
                            delay(texto);
-                    texto = "Ao entrar no armazém, o agente identifica rapidamente uma bomba embaixo da plataforma onde estava sua equipe" 
-                           +"Os soldados estavam desacordados em seu interior. Ele tenta chamá-los, mas apenas um parece estar ciente";
+                    texto = "Ao entrar no armazém, o agente identifica rapidamente uma bomba embaixo da plataforma onde estava sua equipe" ;
+                          
                            delay(texto);
-                    texto = "A bomba será acionada  pela mudança de peso...se tirar um soldado a bomba explode  \n" 
-                           +"o time da bomba esta acionada e só faltam 5 minutos para a bomba explodir.\n";
+                    texto = "A bomba será acionada  pela mudança de peso...ou seja, para tirar um soldado a bomba explode  \n" 
+                           +"o time da bomba esta acionada e só faltam 5 minutos para a bomba explodir.\n\n\n";
                            delay(texto);
+                           
                     System.out.println("Agora "+nomeJogador+" ajude o Agente A desarmar a bomba");
                     
                 Random gerador = new Random();  
@@ -259,10 +270,10 @@ public class Game {
                          System.out.println("Parabéns!!!!!Vc salvou os soldados americanos!");
                          acertou=true;
                     }else if(palpite<numeroAleatorio) {  
-                         System.out.println("Seu palpite é menor que o número aleatório, vc tem "+tentativas--+" chances restanates");
+                         System.out.println("Seu palpite é menor que o número escolhido, então aumente seu número, vc tem "+tentativas--+" chances restanates");
                      
                     } else{
-                         System.out.println("Seu palpite é maior que o numero aleatório, vc tem "+tentativas--+" chances restanates");
+                         System.out.println("Seu palpite é maior que o numero escolhido, então diminua seu número, vc tem "+tentativas--+" chances restanates");
              
                          }if(tentativas== -1){
                           System.out.println("Acabou suas chances. Game over!!!!");
@@ -270,8 +281,43 @@ public class Game {
                          
                 }
                 
-            
+                 texto= "Após salvar sua equipe, o armazém explode e o Agente percebe que Hamid não está brincando";
+                        delay(texto);
+                        
+                 texto = "Um dos soldados entrega uma chave para o Agente e ele percebe que esta chave é de um armário no"
+                        +"no aeroporto. Soldado avisa que se refere a próxima dica, onde será o novo atentado";
                 
+                 texto = "Chegando ao Aeroporto abre o armário e dentro dele estava uma caixa, mas para abrí-la "
+                        +"irá precisar de uma sennha de quatro dígitos. \n \n \n " ;
+                
+                 texto=  "Resolva a equação de primeiro grau : 2x- 6700= -x -2x+ 4525 ";
+                                  delay(texto);
+                 
+                 
+                 System.out.println(nomeJogador+" Vc só tem uma chance, escolha uma letra para as alternativas abaixo: \n"
+                    + "a) 2241.\n"
+                    + "b) 2240.\n" //ALTERNATIVA CORRETA
+                    + "c) 2245.\n"
+                    + "d) 2250");
+            
+                        
+            char opcoes = sc.next().toLowerCase().charAt(0);
+            
+            if(opcoes == 'c') {
+            	System.out.println("\nVocê acertou!!!!Conseguiu pegar a dica para novo atentado;");            	
+            } else {
+            	System.out.println( "Vc errou!!!! GameOver");
+            	sair();
+            }
+            
+                texto = "Com a senha o Agente abre a caixa e pega um envelope e papel timbrado da embaixada americana "
+                        +"o bilhete dizia 'Me encontre no ninho de ratos do seu país'";
+                        delay (texto);
+                        
+                 texto = " O agente também lembra que as cordas que amaarravam as professoras tinham as cores da banceira americana "
+                        +" e corre para Embaixada. \n\n";
+                        delay (texto);
+            
                 
                 // FIM DO DESAFIO 03
 		
