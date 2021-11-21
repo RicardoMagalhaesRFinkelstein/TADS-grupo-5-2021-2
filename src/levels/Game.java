@@ -425,7 +425,7 @@ public class Game {
 				fimDeJogo();
 			}
 		}
-		texto = "AGENTE OBSERVA O LOCAL, PROCURANDO PISTAS PARA DESARMAR A BOMBA ";
+		texto = "Hamid finalmente desaba, e o  Agente corre para desarmar a bomba. Mas antes disso, ele procura por pistas no local";
 		delay(texto);
 		for (int j = 0; j < 4; j++) {
 			texto = "Onde o agente olha á seguir? 1: \n 2: \n 3: \n 4: \n 5: \n 6: \n 7: \n";
@@ -434,35 +434,35 @@ public class Game {
 
 			switch (escolhaAgente) {
 			case 1:
-				texto = "PISTA ÚTIL ";
+				texto = "O Agente lembra do ódio que Hamid tem pelos EUA, então sabe que escolheria fios com as cores da bandeira americana.";
 				delay(texto);
 				break;
 
-			case 2:
-				texto = "PISTA ÚTIL ";
-				delay(texto);
-				break;
-
-			case 3:
-				texto = "PISTA ÚTIL ";
+			case 6:
+				texto = "O agente lembra que fios roxos são perigosos para se cortar, então seria melhor deixar quieto.";
 				delay(texto);
 				break;
 
 			case 4:
-				texto = "PISTA INÚTIL ";
+				texto = "O agente lembra que na maioria das bombas o relógio, caso seja desarmado, explodirá a bomba.";
+				delay(texto);
+				break;
+
+			case 3:
+				texto = "O agente olha para o forro da bomba. ";
 				delay(texto);
 				break;
 
 			case 5:
-				texto = "PISTA INÚTIL ";
+				texto = "O agente lembra de uma aula que teve sobre desarmar bombas, mas infelizmente naquele dia ele estava cansado e dormiu na aula.";
 				delay(texto);
 				break;
-			case 6:
-				texto = "PISTA INÚTIL ";
+			case 2:
+				texto = "O Agente tenta mover a bomba, mas nota que ela é muito pesada. ";
 				delay(texto);
 				break;
 			case 7:
-				texto = "PISTA INÚTIL ";
+				texto = "O Agente vê um quadro. O autor era cubista, logo o quadro é inútil.";
 				delay(texto);
 				break;
 
