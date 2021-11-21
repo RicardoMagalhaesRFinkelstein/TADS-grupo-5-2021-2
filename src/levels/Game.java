@@ -66,7 +66,7 @@ public class Game {
 			case 4:
 				texto = ("Encerrando o menu...");
 				delay(texto);
-				sair = false;
+				sair();
 				break;
 
 			default:
