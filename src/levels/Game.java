@@ -125,13 +125,15 @@ public class Game {
 		texto = " -     DESAFIO 02     - ";
 
 		delay(texto);
-		texto = "O agente atende à ligação que estava aguardando, surpreso, ele descobre que a pessoa que havia lhe ligado era um antigo pupilo o qual ele havia treinado uma década antes em seu tempo no Afeganistão.\n"
-				+ "Voltando no passado, esse rapaz chamado Hamid, integrava uma família que desprezava os EUA, mas ele não via problema na presença dos americanos no Afeganistão, e,\n"
-				+ "como o EUA oferecia alimentação e uma condição de vida melhor para quem era recrutado, ele optou por se tornar um recruta.\n"
-				+ "Conforme o passar do tempo, quase ao fim de seu treinamento, Hamid presenciou uma situação que mudou o seu destino.\n"
-				+ "\n"
-				+ "Em uma batida dos Estados Unidos em um vilarejo, eles suspeitaram que uma pessoa que tinha ligação com o grupo terrorista local a Isis-K, porém o rapaz conhecia aquela pessoa e a considerava alguém inocente.";
-		delay(texto);
+		texto = "O agente atende à ligação que estava aguardando, surpreso, ele descobre que a pessoa que havia lhe ligado era\n"
+                       +" um antigo pupilo o qual ele havia treinado uma década antes em seu tempo no Afeganistão.Voltando no passado, esse rapaz chamado Hamid, \n";
+			delay(texto);
+                texto = "integrava uma família que desprezava os EUA, mas ele não via problema na presença dos americanos no Afeganistão, e,\n"
+                      + "como o EUA oferecia alimentação e uma condição de vida melhor para quem era recrutado, ele optou por se tornar um recruta.\n";
+                        delay(texto);
+		texto = "Conforme o passar do tempo, quase ao fim de seu treinamento, Hamid presenciou uma situação que mudou o seu destino.\n"
+                      + "Em uma batida dos Estados Unidos em um vilarejo, eles suspeitaram que uma pessoa que tinha ligação com o grupo terrorista local a Isis-K, porém o rapaz conhecia aquela pessoa e a considerava alguém inocente.";
+                        delay(texto);
 		System.out.println(" Escolha uma das alternativas: ");
 		delay(texto);
 		texto = "1 - Ajudar o senhor? ";
@@ -158,15 +160,16 @@ public class Game {
 		texto = " - Após a ação do jogador - ";
 		delay(texto);
 		texto = "Voltando para o presente, o agente atende a ligação e escuta uma voz calma e conhecida...\n"
-				+ "Hamid diz – “Lembra de mim “professor”?” sarcasticamente\n"
-				+ "Então o agente respondeu – “Quem é você?”\n"
-				+ "Hamid novamente diz – “Nossa, fico desapontado que você não lembra de mim, encontrei com seus amigos americanos hoje de manhã, nós saímos para dar um rolezinho por aí” diz novamente em um tom sarcástico.\n"
-				+ "O agente responde preocupado - “ONDE ESTÁ MINHA EQUIPE ??!!”\n"
-				+ "Hamid revela – “Tenho duas localizações para te passar, ainda tenho um pouco de esperança de que você seja uma pessoa boa então quero ver que atitude o senhor irá tomar professor”\n"
-				+ "“Tem um armazém localizado ao sul do aeroporto com uma fachada vermelha e branca, vá para lá se quiser encontrar os seus amigos, agora, caso você ainda seja a pessoa boa que eu costumava a conhecer,\n"
-				+ "um grupo de professoras estão presas em um prédio e chamas ao oeste de sua posição, apenas siga a fumaça. Agora, elas são pessoas inocentes, diferente dos seus amiguinhos americanos, que assassinaram um homem a sangue frio tempos atrás.\n\n”";
+		      + "Hamid diz – “Lembra de mim “professor”?” sarcasticamente Então o agente respondeu – “Quem é você?\n";
+			 delay(texto);	
+                texto = "Hamid novamente diz – “Nossa, fico desapontado que você não lembra de mim, encontrei com seus amigos americanos hoje de manhã, nós saímos para dar um rolezinho por aí” diz novamente em um tom sarcástico.\n"
+		      + "O agente responde preocupado - “ONDE ESTÁ MINHA EQUIPE ??!!”\n";
+                        delay(texto);
+		texto = "Hamid revela – “Tenho duas localizações para te passar, ainda tenho um pouco de esperança de que você seja uma pessoa boa então quero ver que atitude o senhor irá tomar professor”\n"
+		      + "“Tem um armazém localizado ao sul do aeroporto com uma fachada vermelha e branca, vá para lá se quiser encontrar os seus amigos, agora, caso você ainda seja a pessoa boa que eu costumava a conhecer,\n"
+                      + "um grupo de professoras estão presas em um prédio e chamas ao oeste de sua posição, apenas siga a fumaça. Agora, elas são pessoas inocentes, diferente dos seus amiguinhos americanos, que assassinaram um homem a sangue frio tempos atrás.\n\n”";
 		delay(texto);
-		texto = " - Fim do desafio 2 - \n\n";
+		texto = " - Fim do desafio 2 - \n\n\n";
 		delay(texto);
 
 		// FINAL DO DESAFIO 02
@@ -531,7 +534,7 @@ public class Game {
         		int tamanhoDelay = TextoFuncao.length();
         		System.out.println(TextoFuncao);
         		try {
-        			TimeUnit.SECONDS.sleep(tamanhoDelay /50);
+        			TimeUnit.SECONDS.sleep(tamanhoDelay /30);
         		} catch (InterruptedException ie) {
         			Thread.currentThread().interrupt();
         		}
