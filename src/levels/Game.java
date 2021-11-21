@@ -145,25 +145,29 @@ public class Game {
 			delay(texto);
 			break;
 		case 2:
-			System.out.println(
-					" Hamid permanece imóvel, quase em estado de choque testemunhando tudo aquilo sem saber o que fazer.\n"
-							+ "Vendo toda essa situação, imaginando como uma pessoa seria capaz de fazer tal ato a alguém inocente,\n"
-							+ "o rapaz pensa a respeito das suas decisões e passa a considerar os EUA invasores de seu país assim como seus familiares.");
+			texto = " Hamid permanece imóvel, quase em estado de choque testemunhando tudo aquilo sem saber o que fazer.\n";
+			delay(texto);
+			texto =  "Vendo toda essa situação, imaginando como uma pessoa seria capaz de fazer tal ato a alguém inocente,\n";
+			delay(texto);
+			texto =  "o rapaz pensa a respeito das suas decisões e passa a considerar os EUA invasores de seu país assim como seus familiares.";
+			delay(texto);
 			break;
 		}
-		texto = " - Após a ação do jogador - ";
+		texto = "Voltando para o presente, o agente atende a ligação e escuta uma voz calma e conhecida...\n";
+		delay(texto); 
+		texto = "HAMID (sarcasticamente) – Lembra de mim “professor”? ";
 		delay(texto);
-		texto = "Voltando para o presente, o agente atende a ligação e escuta uma voz calma e conhecida...\n"
-				+ "Hamid diz – “Lembra de mim “professor”?” sarcasticamente Então o agente respondeu – “Quem é você?\n";
+		texto = "AGENTE - Quem é você?";
 		delay(texto);
-		texto = "Hamid novamente diz – “Nossa, fico desapontado que você não lembra de mim, encontrei com seus amigos americanos hoje de manhã, nós saímos para dar um rolezinho por aí” diz novamente em um tom sarcástico.\n"
-				+ "O agente responde preocupado - “ONDE ESTÁ MINHA EQUIPE ??!!”\n";
+		texto = "HAMID (sarcasticamente) – Nossa, fico desapontado que você não lembra de mim, encontrei com seus amigos americanos hoje de manhã, nós saímos para dar um rolezinho por aí. ";
 		delay(texto);
-		texto = "Hamid revela – “Tenho duas localizações para te passar, ainda tenho um pouco de esperança de que você seja uma pessoa boa então quero ver que atitude o senhor irá tomar professor”\n"
-				+ "“Tem um armazém localizado ao sul do aeroporto com uma fachada vermelha e branca, vá para lá se quiser encontrar os seus amigos, agora, caso você ainda seja a pessoa boa que eu costumava a conhecer,\n"
-				+ "um grupo de professoras estão presas em um prédio e chamas ao oeste de sua posição, apenas siga a fumaça. Agora, elas são pessoas inocentes, diferente dos seus amiguinhos americanos, que assassinaram um homem a sangue frio tempos atrás.\n\n”";
+		texto = "AGENTE (tom preocupado) - “ONDE ESTÁ MINHA EQUIPE ??!!”\n";
 		delay(texto);
-		texto = " - Fim do desafio 2 - \n\n\n";
+		texto = "HAMID – Tenho duas localizações para te passar, ainda tenho um pouco de esperança de que você seja uma pessoa boa então quero ver que atitude o senhor irá tomar professor.";
+		delay(texto);
+		texto =  "Tem um armazém localizado ao sul do aeroporto com uma fachada vermelha e branca, vá para lá se quiser encontrar os seus amigos, agora, caso você ainda seja a pessoa boa que eu costumava a conhecer,";
+		delay(texto);
+		texto =  "um grupo de professoras estão presas em um prédio e chamas ao oeste de sua posição, apenas siga a fumaça. Agora, elas são pessoas inocentes, diferente dos seus amiguinhos americanos, que assassinaram um homem a sangue frio tempos atrás.";
 		delay(texto);
 
 		// FINAL DO DESAFIO 02
@@ -314,9 +318,7 @@ public class Game {
 		// FIM DO DESAFIO 03
 
 		// INICIO DO DESAFIO 04
-		texto = "DESAFIO 04\n";
-		delay(texto);
-
+		System.out.println("CAPÍTULO 4: A EMBAIXADA");
 		texto = " O agente chega à embaixada após salvar os reféns sob ordens do seu superior\n"
 				+ "quando é abordado por um homem aparentemente um dos diplomatas do local,ele explica ao agente\n"
 				+ "sobre a situação da embaixada. Ela está cheia de dignitários de vários países\n"
@@ -352,10 +354,11 @@ public class Game {
 
 		// FIM DO DESAFIO 04
 		// INICIO DESAFIO 5
+		
+		System.out.println("CAPÍTULO 5: O FINAL");
 		int dialogo51 = 0;
 
 		do {
-			// int dialogoLocal = 1;
 			texto = "Inicio da conversa do Agente com o vilão";
 			delay(texto);
 			dialogo51 = sc.nextInt();
@@ -396,25 +399,25 @@ public class Game {
 		delay(texto);
 
 		for (int i = 5; i > 0; i--) {
-			texto = "Selecione o golpe: 1 a 6 ";
+			texto = "Selecione o golpe: 1: Soco na boca do estômago\n 2: golpe na garganta\n 3: Cruzado no queixo\n 4: Chute na canela\n 5: Empurrão\n 6: Soco no braço\n ";
 			delay(texto);
 			int golpe = sc.nextInt();
 
 			if (golpe == 1 || golpe == 2) {
-				texto = "Dano crítico ";
+				texto = "Dano crítico. ";
 				delay(texto);
 				i--;
 			} else if (golpe == 3 || golpe == 4) {
-				texto = "Dano normal ";
+				texto = "Golpe bem-sucedido, sem muito efeito. ";
 				delay(texto);
 			} else {
-				texto = "Golpe falhou ";
+				texto = "Golpe defendido. ";
 				delay(texto);
 				golpeRuim++;
 			}
 
 			if (golpeRuim >= 2) {
-				texto = "VILÃO: foi bom brincar com você, mas como você não me impediu á tempo é hora de dizer adeus.";
+				texto = "HAMID: foi bom brincar com você, mas como você não me impediu á tempo é hora de dizer adeus.";
 				delay(texto);
 				texto = "BOMBA EXPLODE ";
 				delay(texto);
@@ -424,7 +427,7 @@ public class Game {
 		texto = "AGENTE OBSERVA O LOCAL, PROCURANDO PISTAS PARA DESARMAR A BOMBA ";
 		delay(texto);
 		for (int j = 0; j < 4; j++) {
-			texto = "Onde o agente olha á seguir? Escolha 1 a 7";
+			texto = "Onde o agente olha á seguir? 1: \n 2: \n 3: \n 4: \n 5: \n 6: \n 7: \n";
 			delay(texto);
 			int escolhaAgente = sc.nextInt();
 
@@ -470,7 +473,7 @@ public class Game {
 		texto = "AGENTE PERCEBE QUE NÃO TEM MAIS TEMPO, CORRE PRA DESARMAR A BOMBA";
 		delay(texto);
 
-		texto = "O QUE O AGENTE FARÁ PARA DESARMAR A BOMBA? ";
+		texto = "O QUE O AGENTE FARÁ PARA DESARMAR A BOMBA?\n 1: Cortar as linhas azul, vermelha, branca e preta \n 2: cortar as linhas preta, azul, roxa e amarela \n 3: Desconectar o timer";
 		delay(texto);
 
 		int desarmeDaBomba = sc.nextInt();
