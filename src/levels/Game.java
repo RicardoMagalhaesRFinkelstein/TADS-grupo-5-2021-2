@@ -74,9 +74,8 @@ public class Game {
 			System.out.println("Obrigado, até a proxima.");
 		} else {
 			// INICIO DO DESAFIO 01
-			texto = " -     DESAFIO 01     - ";
+			System.out.println("CAPÍTULO 1: O INÍCIO");
 
-			delay(texto);
 			texto = "Após desastres no Afeganistão e o Talibã tomar o poder do país, foi designado um agente da CIA para ir ao Afeganistão e ajudar na evacuação dos soldados americanos no aeroporto de Cabul no Afeganistão.\n"
 					+ "Chegando no aeroporto e após conseguir realizar a evacuação dos soldados o/a agente percebeu que estava faltando um grupo de soldados e sabendo que teria que dar uma explicação aos EUA sobre isso \nele então tem que decidir se vai a procura dos soldados perdidos ou não...";
 			delay(texto);
@@ -114,17 +113,18 @@ public class Game {
 		// FINAL DESAFIO 01
 
 		// INICIO DO DESAFIO 02
-		texto = " -     DESAFIO 02     - ";
-
+		System.out.println("CAPÍTULO 2: CONVERSA MORTAL");
+		
+		texto = "O agente atende à ligação que estava aguardando, surpreso, ele descobre que a pessoa que havia lhe ligado era\n";
 		delay(texto);
-		texto = "O agente atende à ligação que estava aguardando, surpreso, ele descobre que a pessoa que havia lhe ligado era\n"
-				+ " um antigo pupilo o qual ele havia treinado uma década antes em seu tempo no oriente médio. Voltando no passado, esse rapaz chamado Hamid, \n";
+		texto = " um antigo pupilo o qual ele havia treinado uma década antes em seu tempo no oriente médio. Voltando no passado, esse rapaz chamado Hamid, \n";
 		delay(texto);
-		texto = "integrava uma família que desprezava os EUA, mas ele não via problema na presença dos americanos na região, e,\n"
-				+ "como o EUA oferecia alimentação e uma condição de vida melhor para quem era recrutado, ele optou por se tornar um agente.\n";
+		texto = "integrava uma família que desprezava os EUA, mas ele não via problema na presença dos americanos na região, e,\n";
+		delay (texto);
+		texto =  "como o EUA oferecia alimentação e uma condição de vida melhor para quem era recrutado, ele optou por se tornar um agente.\n";
 		delay(texto);
-		texto = "Conforme o passar do tempo, quase ao fim de seu treinamento, Hamid presenciou uma situação que mudou o seu destino.\n"
-				+ "Em um ataque americano contra um vilarejo, eles suspeitaram que um ancião teria ligação com o grupo terrorista local, a Isis-K. Porém o jovem Hamid conhecia aquela pessoa e a considerava alguém inocente.";
+		texto = "Conforme o passar do tempo, quase ao fim de seu treinamento, Hamid presenciou uma situação que mudou o seu destino.";
+		texto =  "Em um ataque americano contra um vilarejo, eles suspeitaram que um ancião teria ligação com o grupo terrorista local, a Isis-K. Porém o jovem Hamid conhecia aquela pessoa e a considerava alguém inocente.";
 		delay(texto);
 		System.out.println(" Escolha uma das alternativas: ");
 		delay(texto);
@@ -174,6 +174,7 @@ public class Game {
 
 		// INÍCIO DO DESAFIO 03
 		System.out.println(" Parabéns!!!! " + nomeJogador + " Você chegou ao desafio três!!!!!\n");
+		System.out.println("CAPÍTULO 3: O RESGATE DOS REFÉNS");
 
 		texto = "Agora " + nomeJogador + " vc precisa salvar os reféns.";
 		delay(texto);
@@ -478,7 +479,7 @@ public class Game {
 
 		int desarmeDaBomba = sc.nextInt();
 		if (desarmeDaBomba == 1) {
-			texto = "PARABÉNS, AGENTE DESARMOU A BOMBA COM SUCESSO, GANHANDO O JOGO";
+			texto = "PARABÉNS, BOMBA DESARMADA COM SUCESSO. BOM TRABALHO "+ nomeJogador;
 			delay(texto);
 		} else if (desarmeDaBomba == 2) {
 			texto = "SEM EFEITO NENHUM, O AGENTE PERCEBE QUE SÓ TEM TEMPO PARA MAIS UMA TENTATIVA. ESCOLHA OUTRA OPÇÃO";
