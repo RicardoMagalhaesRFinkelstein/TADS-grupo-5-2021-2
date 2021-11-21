@@ -118,13 +118,13 @@ public class Game {
 
 		delay(texto);
 		texto = "O agente atende à ligação que estava aguardando, surpreso, ele descobre que a pessoa que havia lhe ligado era\n"
-				+ " um antigo pupilo o qual ele havia treinado uma década antes em seu tempo no Afeganistão.Voltando no passado, esse rapaz chamado Hamid, \n";
+				+ " um antigo pupilo o qual ele havia treinado uma década antes em seu tempo no oriente médio. Voltando no passado, esse rapaz chamado Hamid, \n";
 		delay(texto);
-		texto = "integrava uma família que desprezava os EUA, mas ele não via problema na presença dos americanos no Afeganistão, e,\n"
-				+ "como o EUA oferecia alimentação e uma condição de vida melhor para quem era recrutado, ele optou por se tornar um recruta.\n";
+		texto = "integrava uma família que desprezava os EUA, mas ele não via problema na presença dos americanos na região, e,\n"
+				+ "como o EUA oferecia alimentação e uma condição de vida melhor para quem era recrutado, ele optou por se tornar um agente.\n";
 		delay(texto);
 		texto = "Conforme o passar do tempo, quase ao fim de seu treinamento, Hamid presenciou uma situação que mudou o seu destino.\n"
-				+ "Em uma batida dos Estados Unidos em um vilarejo, eles suspeitaram que uma pessoa que tinha ligação com o grupo terrorista local a Isis-K, porém o rapaz conhecia aquela pessoa e a considerava alguém inocente.";
+				+ "Em um ataque americano contra um vilarejo, eles suspeitaram que um ancião teria ligação com o grupo terrorista local, a Isis-K. Porém o jovem Hamid conhecia aquela pessoa e a considerava alguém inocente.";
 		delay(texto);
 		System.out.println(" Escolha uma das alternativas: ");
 		delay(texto);
@@ -137,10 +137,12 @@ public class Game {
 
 		switch (n1) {
 		case 1:
-			System.out.println(
-					" Hamid toma atitude vendo aquela situação e tenta ajudar o senhor a qual estava sendo agredido, porém mesmo implorando para os soldados parassem com aquilo, eles continuaram até matar o homem.\n"
-							+ "Após todo o ocorrido os soldados americanos ocultaram a morte do senhor e mesmo com a população de testemunha do ocorrido, seus atos foram ignorados e ninguém acabou punido.\n"
-							+ "Ao testemunhar tudo aquilo, sua concepção a respeito dos Estados Unidos mudou, o garoto na qual não via problema algum na presença de americanos no Afeganistão, passou a odiá-los assim como seus familiares.");
+			texto = " Hamid toma atitude vendo aquela situação e tenta ajudar o senhor , que estava sendo brutalmente agredido. Porém mesmo implorando para os soldados parassem com aquilo, eles continuaram até matar o homem.\n";
+			delay(texto);
+			texto = "Após todo o ocorrido os soldados americanos ocultaram a morte do senhor e mesmo com a população tendo presenciado o ocorrido, seus atos foram ignorados e ninguém acabou punido.\n";
+			delay(texto);
+			texto =  "Ao testemunhar tudo aquilo, sua concepção a respeito dos Estados Unidos mudou. Se antes o jovem garoto não via problemas na ocupação, isso mudou ao testemunhar um ataque tão brutal.";
+			delay(texto);
 			break;
 		case 2:
 			System.out.println(
@@ -501,7 +503,8 @@ public class Game {
 				+ "|    |  |       |       |    ___| |   -   |   |   |    ___|      <\r\n"
 				+ "|_______|___|___|__|_|__|_______| |_______|\\_____/|_______|___|__|\r\n"
 				+ "                                                                  ");
-		System.out.println("CRÉDITOS");
+		System.out.println("CRÉDITOS: \n - Victor Henrique Moreira\\n\"\r\n"
+				+ "						+ \" - Viviane Cipollari\\n\" + \" - Ricardo Magalhães\\n\" + \" - Matheus\\n");
 		sair();
 	}
 
