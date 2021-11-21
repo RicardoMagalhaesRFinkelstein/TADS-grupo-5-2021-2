@@ -22,7 +22,8 @@ public class Game {
                 
                 System.out.println("Olá,  seja bem-vindo ao jogo!\n");
                 System.out.println("Seu papel é muito importante, vc será o nosso agente");
-                 System.out.println("Qual seu nome????");        
+                 System.out.println("Qual seu nome????");
+                 nomeJogador=sc.next();
 
 		System.out.println(
 				nomeJogador+" Escolha uma das opções abaixo:\n\n" 
@@ -353,8 +354,9 @@ public class Game {
 		delay(texto);
 		
 		 texto = " Ao tentar se aproximar do homem, ele puxa uma arma e começa a atirar,\n"
-				+ "O agente se assusta, e encontra uma cobertura atrás de uma parede\n"
-				+ "o homem então corre para o saguão principal aonde da acesso a uma escadaria\n"
+				+ "O agente se assusta, e encontra uma cobertura atrás de uma parede\n";
+                 delay(texto);
+                 texto = "o homem então corre para o saguão principal aonde da acesso a uma escadaria\n"
 				+ "e entra em uma porta que lá estava, com uma fechadura eletronica.";
 		delay(texto);
 		
