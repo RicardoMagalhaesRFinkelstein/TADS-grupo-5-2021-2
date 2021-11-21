@@ -204,12 +204,13 @@ public class Game {
                          +"então as professoras começaram a gritar:  “Socorro!! Alguém nos ajude!!\n";
                          delay (texto);
                 
-                texto =  "O agente chega no fundo do armazém onde as professoras estavam e se depara com a seguinte situação.\n"
-                        +"As professoras estavam amarradas e assustadas gritando socorro, mas a porta que dava acesso onde elas estavam \n";
-                         delay (texto);
+                texto =  "O agente chega no fundo do armazém onde as professoras estavam e se depara com a seguinte \n"
+                        +"situação.As professoras estavam amarradas e assustadas gritando socorro, mas a porta\n";
+                        delay (texto);
                          
-                texto =  "estava presa com um bomba e para desativá-la Hamid deixou uma dica 'lembra quantas vezes que quase perdi a vida no treinamento'??\n";
-                         delay(texto);         
+                texto =  "que dava acesso a elas estava presa com um bomba e para desativá-la Hamid \n"
+                        +"deixou uma dica - 'lembra quantas vezes que quase perdi a vida no treinamento'??\n";
+                        delay(texto);         
                  
                  
                 System.out.println("Agora " +nomeJogador+", para lembrar quantas vezes Hamid "
@@ -250,8 +251,8 @@ public class Game {
                     texto ="No bilhete entregue pelas professoras Hamid mostram a localização da equipe de soldados\n"
                            +"era uma armazém próximo do armazém onde estavam as professoras, mas este não estva em chamas";
                            delay(texto);
-                    texto = "Ao entrar no armazém, o agente identifica rapidamente uma bomba embaixo da plataforma onde estava sua equipe" ;
-                          
+                    texto = "Ao entrar no armazém, o agente identifica rapidamente uma bomba embaixo da plataforma \n"
+                           +"onde estava sua equipe";
                            delay(texto);
                     texto = "A bomba será acionada  pela mudança de peso...ou seja, para tirar um soldado a bomba explode  \n" 
                            +"o time da bomba esta acionada e só faltam 5 minutos para a bomba explodir.\n\n\n";
@@ -284,15 +285,17 @@ public class Game {
                          
                 }
                 
-                 texto= "Após salvar sua equipe, o armazém explode e o Agente percebe que Hamid não está brincando";
-                        delay(texto);
+                 texto= "Após salvar sua equipe, o armazém explode e o Agente fica assustado, pois não sabe do que "
+                       +"Hamid é capaz";
+                 delay(texto);
                         
-                 texto = "Um dos soldados entrega uma chave para o Agente e ele percebe que esta chave é de um armário no"
-                        +"no aeroporto. Soldado avisa que se refere a próxima dica, onde será o novo atentado";
-                        delay(texto);
+                 texto = "Um dos soldados entrega uma chave para o Agente e ele percebe que esta chave é "
+                        +"de um armário no aeroporto. Soldado avisa que se refere a próxima dica, "
+                        +"onde será o novo atentado";
+                 delay(texto);
                         
                  texto = "Chegando ao Aeroporto abre o armário e dentro dele estava uma caixa, mas para abrí-la "
-                        +"irá precisar de uma sennha de quatro dígitos. \n \n \n " ;
+                        +"irá precisar de uma sennha de quatro dígitos.  \n \n " ;
                         delay(texto);
                         
                  texto=  "Resolva a equação de primeiro grau : 2x- 6700 = x -4x + 4525 ";
