@@ -258,7 +258,7 @@ public class Game {
 		delay(texto);
 
 		System.out.println(
-				"Nesta parte do jogo terão muitos desafios com números, " + nomeJogador + ", vc está pronto????");
+				"Nesta parte do jogo terão muitos desafios com números, " + nomeJogador + ", vc está pronto(a)????");
 
 		int escolha;
 
@@ -294,7 +294,7 @@ public class Game {
 
 		System.out.println(nomeJogador + " Vc só tem uma chance, escolha alternativa abaixo, quantas vezes ele quase perdeu a vida: \n"
 				+ "1) 1 vez  .\n" + "2) 2 vezes.\n" // ALTERNATIVA CORRETA
-				+ "c) 3 vezes.\n" + "d) 4 vezes");
+				+ "3) 3 vezes.\n" + "4) 4 vezes");
 
 		int alternativa = sc.nextInt();
 
@@ -367,10 +367,10 @@ public class Game {
 		delay(texto);
 
 		texto = "Chegando ao Aeroporto abre o armário e dentro dele estava uma caixa, mas para abrí-la "
-				+ "irá precisar de uma sennha de quatro dígitos.  \n \n ";
+				+ "irá precisar de uma senha de quatro dígitos.  \n \n ";
 		delay(texto);
 
-		texto = "Resolva a equação de primeiro grau : 2x- 6700 = x -4x + 4525 ";
+		texto = "Resolva a equação de primeiro grau : 2x- 6700 = x -4x + 4525 para encontrar a senha.";
 		delay(texto);
 
 		System.out.println(nomeJogador + " Vc só tem uma chance, escolha uma letra para as alternativas abaixo: \n"
