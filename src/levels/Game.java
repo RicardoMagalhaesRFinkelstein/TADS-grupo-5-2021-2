@@ -196,6 +196,7 @@ public class Game {
 		texto =  "como o EUA oferecia alimentação e uma condição de vida melhor para quem era recrutado, ele optou por se tornar um agente.\n";
 		delay(texto);
 		texto = "Conforme o passar do tempo, quase ao fim de seu treinamento, Hamid presenciou uma situação que mudou o seu destino.";
+		delay(texto);
 		texto =  "Em um ataque americano contra um vilarejo, eles suspeitaram que um ancião teria ligação com o grupo terrorista local, a Isis-K. Porém o jovem Hamid conhecia aquela pessoa e a considerava alguém inocente.";
 		delay(texto);
 		System.out.println(" Escolha uma das alternativas: ");
@@ -296,7 +297,7 @@ public class Game {
 			System.out.println("\nVocê acertou!!!!Conseguiu salvar as professoras");
 		} else {
 			System.out.println("Vc errou!!!! GameOver");
-			sair();
+			fimDeJogo();
 		}
 
 		texto = "Três professoras estão amarradas em  com cordas de cores \n"
@@ -391,7 +392,7 @@ public class Game {
 		// FIM DO DESAFIO 03
 
 		// INICIO DO DESAFIO 04
-		 texto = "DESAFIO 04\n";
+		 texto = "CAPITULO 4: ATAQUE A EMBAIXADA";
 		delay(texto);
 		texto = " O agente chega à embaixada após salvar os reféns quando é abordado por um homem,\n"
 				+ "ele se apresenta como diplomata e explica ao agente sobre a situação da embaixada.\n"
@@ -529,7 +530,7 @@ public class Game {
 			texto = " Neutralizando o Alvo e salvando as pessoas do local,\n"
 					+ "O agente parte para examinar o local do acontecido e nota\n"
 					+ "uma porta ligeiramente aberta, ele a abre e ve uma tilha\n "
-					+ "de algum fluido no chão indo escada a baixo da embaixada.";
+					+ "de algum fluido no chão indo escada a baixo da embaixada.\n";
 			delay(texto);
 		} else if (tdamage >= 3) {
 			System.out.println("Voce perdeu o combate! ");
@@ -544,6 +545,8 @@ public class Game {
 
 		do {
 			texto = "Inicio da conversa do Agente com o vilão";
+			delay(texto);
+			texto = "Escolha a opção de 1 a 6";
 			delay(texto);
 			dialogo51 = sc.nextInt();
 
@@ -583,7 +586,7 @@ public class Game {
 		delay(texto);
 
 		for (int i = 5; i > 0; i--) {
-			texto = "Selecione o golpe: 1: Soco na boca do estômago\n 2: golpe na garganta\n 3: Cruzado no queixo\n 4: Chute na canela\n 5: Empurrão\n 6: Soco no braço\n ";
+			texto = "Selecione o golpe:\n 1: Soco na boca do estômago\n 2: golpe na garganta\n 3: Cruzado no queixo\n 4: Chute na canela\n 5: Empurrão\n 6: Soco no braço\n ";
 			delay(texto);
 			int golpe = sc.nextInt();
 
@@ -611,7 +614,7 @@ public class Game {
 		texto = "Hamid finalmente desaba, e o  Agente corre para desarmar a bomba. Mas antes disso, ele procura por pistas no local";
 		delay(texto);
 		for (int j = 0; j < 4; j++) {
-			texto = "Onde o agente olha á seguir? 1: \n 2: \n 3: \n 4: \n 5: \n 6: \n 7: \n";
+			texto = "Onde o agente olha á seguir?\n 1: \n 2: \n 3: \n 4: \n 5: \n 6: \n 7: \n";
 			delay(texto);
 			int escolhaAgente = sc.nextInt();
 
@@ -703,7 +706,7 @@ public class Game {
 		int tamanhoDelay = TextoFuncao.length();
 		System.out.println(TextoFuncao);
 		try {
-			TimeUnit.SECONDS.sleep(tamanhoDelay / 30);
+			TimeUnit.SECONDS.sleep(tamanhoDelay / 55);
 		} catch (InterruptedException ie) {
 			Thread.currentThread().interrupt();
 		}
