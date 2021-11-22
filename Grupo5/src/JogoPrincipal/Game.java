@@ -104,7 +104,8 @@ public class Game {
 		               +"com o nome do tipo da arma para assim passar nesta fase.\n";
 		        delay(texto);
 		        texto="Dica: Arma de disparo de pequeno porte.\n"
-		               +"Obeservação: Use letras minúsculas para completar o nome da arma.\n";
+		        	   + "Dica: A palavra chave possui 7 caracteres.\n"
+		               +"Observação: Digite caracteres válidos (Não numéricos).\n";
 		        delay(texto);
 		        String palavraChave = "pistola";
 		        String letrasUsadas = "";
@@ -127,7 +128,7 @@ public class Game {
 		                    System.out.printf("Forca rodada %d\nQual letra você escolhe?%n", tentativas);
 		                    
 		                    @SuppressWarnings("resource")
-							char TentativaDeLetra = new java.util.Scanner(System.in).next().charAt(0);
+							char TentativaDeLetra = new java.util.Scanner(System.in).next().toLowerCase().charAt(0);
 		                    if(letrasUsadas.indexOf(TentativaDeLetra)>=0){ 
 		                        System.out.printf("Letra já usada '%c'.%n", TentativaDeLetra);
 		                    }else{
@@ -138,7 +139,8 @@ public class Game {
 		                                letraAdivinhada += letrasUsadas.indexOf(palavraChave.charAt(subst))>=0 ? palavraChave.charAt(subst): "_"; 
 		                            }
 		                            if(letraAdivinhada.contains("_")){
-		                                System.out.printf("Está indo bem! A letra'%s' existe na palavra, mas ainda há letras escondidas.%n", TentativaDeLetra);
+		                                tentativas--;
+		                            	System.out.printf("Está indo bem! A letra'%s' existe na palavra, mas ainda há letras escondidas.%n", TentativaDeLetra);
 		                            }else{
 		                                System.out.printf("Parabéns! A palavra adivinhada era %s", letraAdivinhada);
 		                                System.out.println("\nVocê conseguiu completar o desafio!\n");
@@ -174,28 +176,24 @@ public class Game {
 		                    +"e espera a resposta para saber o que fazer...\n");
 		             break;   
 			}
-		        texto = " - Após a ação do jogador - \n";
-		        delay (texto);
 		        texto = "Sendo a ação do jogador a (sim) ou a (não) ele espera da mesma forma o telefone\n"
 		                +"de seu general, mas não esperava que quem vai ligar para ele é uma pessoa misteriosa,\n"
 		                +"mas que sabe muito sobre ele.\n";
-		        delay (texto);
-		        texto = " -     Fim do desafio 1     -\n ";
-		        delay (texto);
+		        delay (texto);;
 		}
 		
 		// FINAL DESAFIO 01
 
 		// INICIO DO DESAFIO 02
-		System.out.println("CAPÍTULO 2: CONVERSA MORTAL");
+		System.out.println("CAPÍTULO 2: CONVERSA MORTAL\n");
 		
-		texto = "O agente atende à ligação que estava aguardando, surpreso, ele descobre que a pessoa que havia lhe ligado era\n";
+		texto = "O agente atende à ligação que estava aguardando, surpreso, ele descobre que a pessoa que havia lhe ligado era";
 		delay(texto);
-		texto = " um antigo pupilo o qual ele havia treinado uma década antes em seu tempo no oriente médio. Voltando no passado, esse rapaz chamado Hamid, \n";
+		texto = " um antigo pupilo o qual ele havia treinado uma década antes em seu tempo no oriente médio. Voltando no passado, esse rapaz chamado Hamid,";
 		delay(texto);
-		texto = "integrava uma família que desprezava os EUA, mas ele não via problema na presença dos americanos na região, e,\n";
+		texto = "integrava uma família que desprezava os EUA, mas ele não via problema na presença dos americanos na região, e,";
 		delay (texto);
-		texto =  "como o EUA oferecia alimentação e uma condição de vida melhor para quem era recrutado, ele optou por se tornar um agente.\n";
+		texto =  "como o EUA oferecia alimentação e uma condição de vida melhor para quem era recrutado, ele optou por se tornar um agente.";
 		delay(texto);
 		texto = "Conforme o passar do tempo, quase ao fim de seu treinamento, Hamid presenciou uma situação que mudou o seu destino.";
 		delay(texto);
@@ -214,23 +212,23 @@ public class Game {
 
 		switch (n1) {
 		case 1:
-			texto = " Hamid toma atitude vendo aquela situação e tenta ajudar o senhor , que estava sendo brutalmente agredido. Porém mesmo implorando para os soldados parassem com aquilo, eles continuaram até matar o homem.\n";
+			texto = " Hamid toma atitude vendo aquela situação e tenta ajudar o senhor , que estava sendo brutalmente agredido. Porém mesmo implorando para os soldados parassem com aquilo, eles continuaram até matar o homem.";
 			delay(texto);
-			texto = "Após todo o ocorrido os soldados americanos ocultaram a morte do senhor e mesmo com a população tendo presenciado o ocorrido, seus atos foram ignorados e ninguém acabou punido.\n";
+			texto = "Após todo o ocorrido os soldados americanos ocultaram a morte do senhor e mesmo com a população tendo presenciado o ocorrido, seus atos foram ignorados e ninguém acabou punido.";
 			delay(texto);
 			texto =  "Ao testemunhar tudo aquilo, sua concepção a respeito dos Estados Unidos mudou. Se antes o jovem garoto não via problemas na ocupação, isso mudou ao testemunhar um ataque tão brutal.";
 			delay(texto);
 			break;
 		case 2:
-			texto = " Hamid permanece imóvel, quase em estado de choque testemunhando tudo aquilo sem saber o que fazer.\n";
+			texto = " Hamid permanece imóvel, quase em estado de choque testemunhando tudo aquilo sem saber o que fazer.";
 			delay(texto);
-			texto =  "Vendo toda essa situação, imaginando como uma pessoa seria capaz de fazer tal ato a alguém inocente,\n";
+			texto =  "Vendo toda essa situação, imaginando como uma pessoa seria capaz de fazer tal ato a alguém inocente,";
 			delay(texto);
 			texto =  "o rapaz pensa a respeito das suas decisões e passa a considerar os EUA invasores de seu país assim como seus familiares.";
 			delay(texto);
 			break;
 		}
-		texto = "Voltando para o presente, o agente atende a ligação e escuta uma voz calma e conhecida...\n";
+		texto = "Voltando para o presente, o agente atende a ligação e escuta uma voz calma e conhecida...";
 		delay(texto); 
 		texto = "HAMID (sarcasticamente) – Lembra de mim “professor”? ";
 		delay(texto);
@@ -238,20 +236,20 @@ public class Game {
 		delay(texto);
 		texto = "HAMID (sarcasticamente) – Nossa, fico desapontado que você não lembra de mim, encontrei com seus amigos americanos hoje de manhã, nós saímos para dar um rolezinho por aí. ";
 		delay(texto);
-		texto = "AGENTE (tom preocupado) - “ONDE ESTÁ MINHA EQUIPE ??!!”\n";
+		texto = "AGENTE (tom preocupado) - “ONDE ESTÁ MINHA EQUIPE ??!!”";
 		delay(texto);
 		texto = "HAMID – Tenho duas localizações para te passar, ainda tenho um pouco de esperança de que você seja uma pessoa boa então quero ver que atitude o senhor irá tomar professor.";
 		delay(texto);
 		texto =  "Tem um armazém localizado ao sul do aeroporto com uma fachada vermelha e branca, vá para lá se quiser encontrar os seus amigos, agora, caso você ainda seja a pessoa boa que eu costumava a conhecer,";
 		delay(texto);
-		texto =  "um grupo de professoras estão presas em um prédio e chamas ao oeste de sua posição, apenas siga a fumaça. Agora, elas são pessoas inocentes, diferente dos seus amiguinhos americanos, que assassinaram um homem a sangue frio tempos atrás.";
+		texto =  "um grupo de professoras estão presas em um prédio e chamas ao oeste de sua posição, apenas siga a fumaça. Agora, elas são pessoas inocentes, diferente dos seus amiguinhos americanos, que assassinaram um homem a sangue frio tempos atrás.\n";
 		delay(texto);
 
 		// FINAL DO DESAFIO 02
 
 		// INÍCIO DO DESAFIO 03
                 System.out.println("CAPÍTULO 3: O RESGATE DOS REFÉNS\n");
-		System.out.println(" Parabéns!!!! " + nomeJogador + " Você chegou ao  Capítulo3!!!!!\n");
+		System.out.println(" Parabéns!!!! " + nomeJogador + " Você chegou ao  Capítulo 3!!!!!\n");
 		
 		texto = "Agora " + nomeJogador + " vc precisa salvar os reféns.";
 		delay(texto);
@@ -264,7 +262,7 @@ public class Game {
 		System.out.println("\n[1] - Sim \n[2] - Não");
 		escolha = sc.nextInt();
 		if (escolha == 1) {
-			System.out.println("Vamos ao desafio!!!");
+			System.out.println("Vamos ao desafio!!!\n");
 		} else {
 			sair();
 		}
@@ -286,30 +284,30 @@ public class Game {
 		delay(texto);
 
 		System.out.println("Agora " + nomeJogador + ", para lembrar quantas vezes Hamid "
-				+ "quase´perdeu a vida nos treinamentos. \n\n\n");
+				+ "quase´perdeu a vida nos treinamentos. \n");
 
 		texto = "Resolva a equação de segundo grau : 5x²-20=0 para descobrir quantas vezes Hamid quase morreu";
 		delay(texto);
 
-		System.out.println(nomeJogador + " Vc só tem uma chance, escolha alternativa abaixo: \n"
-				+ "1) 1 vez  .\n" + "2) 2 vezes.\n" // ALTERNATIVA CORRETA
-				+ "3) 3 vezes.\n" + "4) 4 vezes");
+		System.out.println(nomeJogador + " Vc só tem uma chance, escolha alternativa abaixo:\n"
+				+ "1) 1 vez\n" + "2) 2 vezes\n" // ALTERNATIVA CORRETA
+				+ "3) 3 vezes\n" + "4) 4 vezes");
 
 		int alternativa = sc.nextInt();
 
 		if (alternativa == 2) {
-			System.out.println("\nVocê acertou!!!!Conseguiu salvar as professoras");
+			System.out.println("\nVocê acertou!!!!Conseguiu salvar as professoras.\n");
 		} else {
-			System.out.println("Vc errou!!!! GameOver");
+			System.out.println("Vc errou!!!!");
 			fimDeJogo();
 		}
 
 		texto = "Três professoras estão amarradas em  com cordas de cores \n"
-				+ "diferentes, Azul, Vermelho e Branco. Isso chama a atenção do agente cores da bandeira americana,\n";
+				+ "diferentes, Azul, Vermelho e Branco. Isso chama a atenção do agente cores da bandeira americana,";
 		delay(texto);
 
 		texto = "mas ele continua avançando para desamarrá-las, após libertá-las\n"
-				+ "uma das professoras entrega um bilhete a mando de Hamid para o \n";
+				+ "uma das professoras entrega um bilhete a mando de Hamid para o ";
 		delay(texto);
 
 		texto = "agente. Ela diz:\"“Ele pediu para lhe entregar\n"
@@ -320,10 +318,10 @@ public class Game {
 				+ "era uma armazém próximo do armazém onde estavam as professoras, mas este não estva em chamas";
 		delay(texto);
 		texto = "Ao entrar no armazém, o agente identifica rapidamente uma bomba embaixo da plataforma \n"
-				+ "onde estava sua equipe";
+				+ "onde estava sua equipe\n";
 		delay(texto);
 		texto = "A bomba será acionada  pela mudança de peso...ou seja, para tirar um soldado a bomba explode  \n"
-				+ "o time da bomba esta acionada e só faltam 5 minutos para a bomba explodir.\n\n\n";
+				+ "o time da bomba esta acionada e só faltam 5 minutos para a bomba explodir.\n";
 		delay(texto);
 
 		System.out.println("Agora " + nomeJogador + " ajude a desarmar a bomba");
@@ -396,7 +394,7 @@ public class Game {
 		// FIM DO DESAFIO 03
 
 		// INICIO DO DESAFIO 04
-		 texto = "CAPITULO 4: ATAQUE A EMBAIXADA";
+		 texto = "CAPITULO 4: ATAQUE A EMBAIXADA\n";
 		delay(texto);
 		texto = " O agente chega à embaixada após salvar os reféns quando é abordado por um homem,\n"
 				+ "ele se apresenta como diplomata e explica ao agente sobre a situação da embaixada.\n"
@@ -545,13 +543,13 @@ public class Game {
 	
 		// INICIO DESAFIO 5
 		
-		System.out.println("CAPÍTULO 5: O FINAL");
+		System.out.println("CAPÍTULO 5: O FINAL\n");
 		int dialogo51 = 0;
 
 		do {
 			texto = "Inicio da conversa do Agente com o vilão";
 			delay(texto);
-			texto = "Escolha a opção de 1 a 6";
+			texto = "Escolha a opção de 1 a 3";
 			delay(texto);
 			dialogo51 = sc.nextInt();
 
@@ -570,17 +568,6 @@ public class Game {
 				texto = "Dialogo 3";
 				delay(texto);
 				break;
-
-			case 4:
-				texto = "Dialogo 4";
-				delay(texto);
-				break;
-
-			case 5:
-				texto = "Dialogo 5";
-				delay(texto);
-				break;
-
 			}
 
 		} while (dialogo51 == 0 || dialogo51 == 1 || dialogo51 == 2 || dialogo51 == 3 || dialogo51 == 4
@@ -698,8 +685,10 @@ public class Game {
 				+ "|    |  |       |       |    ___| |   -   |   |   |    ___|      <\r\n"
 				+ "|_______|___|___|__|_|__|_______| |_______|\\_____/|_______|___|__|\r\n"
 				+ "                                                                  ");
-		System.out.println("CRÉDITOS: \n - Victor Henrique Moreira\\n\"\r\n"
-				+ "						+ \" - Viviane Cipollari\\n\" + \" - Ricardo Magalhães\\n\" + \" - Matheus\\n");
+		System.out.println("CRÉDITOS: \n - Victor Moreira\n"
+				+ " - Viviane Cipollari\n" 
+				+ " - Ricardo Magalhães\n" 
+				+ " - Matheus Oliveira\n");
 		sair();
 	}
 
