@@ -76,40 +76,110 @@ public class Game {
 			// INICIO DO DESAFIO 01
 			System.out.println("CAPÍTULO 1: O INÍCIO");
 
-			texto = "Após desastres no Afeganistão e o Talibã tomar o poder do país, foi designado um agente da CIA para ir ao Afeganistão e ajudar na evacuação dos soldados americanos no aeroporto de Cabul no Afeganistão.\n"
-					+ "Chegando no aeroporto e após conseguir realizar a evacuação dos soldados o/a agente percebeu que estava faltando um grupo de soldados e sabendo que teria que dar uma explicação aos EUA sobre isso \nele então tem que decidir se vai a procura dos soldados perdidos ou não...";
-			delay(texto);
-			texto = " -     AÇÃO     - ";
-			delay(texto);
-			texto = "1 - Procurar soldados? ";
-			delay(texto);
-			texto = "2 - Não procurar soldados? ";
-			delay(texto);
+			texto = "Após desastres no Afeganistão e o Talibã tomar o poder do país,\n"
+	                +"foi designado um agente da CIA para ir ao Afeganistão";
+	        delay(texto);
+	        texto= "e ajudar na evacuação dos soldados americanos no aeroporto de Cabul no Afeganistão.\n" 
+	                +"Chegando no aeroporto e após conseguir realizar a evacuação dos soldados";
+	        delay(texto);       
+	        texto= nomeJogador+", percebeu que estava faltando um grupo de soldados\n"
+	                +"e sabendo que teria que dar uma explicação aos EUA sobre isso\n"
+	                +"ele então tem que decidir se vai a procura dos soldados perdidos ou não...\n";
+	        delay (texto);
+	        System.out.println(nomeJogador+ ", escolha uma das alternativas: \n");
+	        texto = "[1] - Procurar soldados? \n";
+	        delay (texto);
+	        texto = "[2] - Não procurar soldados?\n";
+	        delay (texto);
 
 			int n1 = sc.nextInt();
 
-			switch (n1) {
-			case 1:
-				System.out.println(
-						" O/a agente fica em uma intensa procura sobre os soldados restantes até que um grupo de mulheres que foram salvas pelo grupo de soldados\n"
-								+ "fala que eles foram capturados pelo grupo terrorista do Talibã e que viu eles sendo levados dentro de um carro para fora do aeroporto, com isso em mente e sem poder deixar o local\n"
-								+ "o/a agente notifica seu general e espera uma resposta através de uma ligação do que continuar fazendo, ficar no aeroporto e conseguir evacuar os soldados e alguns civis ou deixar o aeroporto e ir atrás dos soldados capturado");
-				break;
-			case 2:
-				System.out.println(
-						" Com a recusa do agente em procurar os soldados perdidos a multidão que está no aeroporto percebe que sobra algumas vagas ainda no avião\n"
-								+ "e com isso gera uma grande briga entre os civis para ver quem vai entrar no avião e acaba que os civis tentam tomar controle do avião contra os soldados e isso gera uma briga intensa\n"
-								+ "entre soldados e civis, gerando até mesmo uma morte por conta da tentativa de tomada de avião, fazendo assim com que o/a agente tenha que verificar se nenhum repórter flagrou a morte do civil\n"
-								+ "e resolver o problema do homicídio e com isso notifica seu general através de um ligação e espera a resposta para saber o que fazer...");
-				break;
+			texto= "Para prosseguir você vai precisar de uma arma para sua segurança,\n"
+		               +"como você está em um ambiente hostil é melhor se prefinir usando uma arma de pequeno porte\n"
+		               +"para assim os civis não perceberem a arma e você garantir sua segurança.";
+		        delay (texto);
+		        texto= "Com base na informação sobre o tipo de arma que você precisa responda abaixo\n"
+		               +"com o nome do tipo da arma para assim passar nesta fase.\n";
+		        delay(texto);
+		        texto="Dica: Arma de disparo de pequeno porte.\n"
+		               +"Obeservação: Use letras minúsculas para completar o nome da arma.\n";
+		        delay(texto);
+		        String palavraChave = "pistola";
+		        String letrasUsadas = "";
+		        String palavraDescoberta ="";
+		        String letraAdivinhada = "";
+		        
+		        outerloop:
+		            for(int i=0; i < palavraChave.length(); i++){
+		                palavraDescoberta += "_";
+		                
+		                for(int tentativas =0;tentativas<15;tentativas++){
+		                    if(tentativas == 10){
+		                        System.out.println(" _______ _______ _______ _______   _______ ___ ___ _______ ______ \n" +
+		                                           "|     __|   _   |   |   |    ___| |       |   |   |    ___|   __ \\\n" +
+		                                           "|    |  |       |       |    ___| |   -   |   |   |    ___|      <\n" +
+		                                           "|_______|___|___|__|_|__|_______| |_______|\\_____/|_______|___|__|");
+		                        System.exit(0);
+		                    }
+		                    System.out.printf("Forca rodada %d\nQual letra você escolhe?%n", tentativas);
+		                    
+		                    char TentativaDeLetra = new java.util.Scanner(System.in).next().charAt(0);
+		                    if(letrasUsadas.indexOf(TentativaDeLetra)>=0){ 
+		                        System.out.printf("Letra já usada '%c'.%n", TentativaDeLetra);
+		                    }else{
+		                        letrasUsadas += TentativaDeLetra;
+		                        if(palavraChave.indexOf(TentativaDeLetra)>=0){ 
+		                            letraAdivinhada = "";
+		                            for(int subst= 0; subst<palavraChave.length(); subst++){ 
+		                                letraAdivinhada += letrasUsadas.indexOf(palavraChave.charAt(subst))>=0 ? palavraChave.charAt(subst): "_"; 
+		                            }
+		                            if(letraAdivinhada.contains("_")){
+		                                System.out.printf("Está indo bem! A letra'%s' existe na palavra, mas ainda há letras escondidas.%n", TentativaDeLetra);
+		                            }else{
+		                                System.out.printf("Parabéns! A palavra adivinhada era %s", letraAdivinhada);
+		                                System.out.println("\nVocê conseguiu completar o desafio!\n");
+		                                break outerloop;
+		                            }
+		                        }else{
+		                            System.out.printf("Essa letra '%c' não existe na palavra.\n", TentativaDeLetra);
+		                        }
+		                    }
+		                }
+		            }
+		        switch (n1){
+		        case 1:
+		            
+		            System.out.println(nomeJogador+ ", fica em uma intensa procura sobre os soldados restantes\n"
+		                    +"até que um grupo de mulheres que foram salvas pelo grupo de soldados\n" 
+		                    +"fala que eles foram capturados pelo grupo terrorista do Talibã\n"
+		                    +"e que viu eles sendo levados dentro de um carro para fora do aeroporto,\n"
+		                    +"com isso em mente e sem poder deixar o local\n"
+		                    +nomeJogador+ " notifica seu general e espera uma resposta através de uma ligação\n"
+		                    +"do que continuar fazendo, ficar no aeroporto e conseguir evacuar os soldados\n"
+		                    +"e alguns civis ou deixar o aeroporto e ir atrás dos soldados capturado.\n");                   
+		             break;
+		        case 2:
+		            
+		            System.out.println("Com a recusa do "+nomeJogador+" em procurar os soldados perdidos, a multidão \n"
+		                    +"que está no aeroporto percebe que sobra algumas vagas ainda no avião e com isso gera \n" 
+		                    +"uma grande briga entre os civis para ver quem vai entrar no avião e acaba que os civis \n"
+		                    +"tentam tomar controle do avião contra os soldados e isso gera uma briga intensa entre soldados e civis,\n" 
+		                    +"gerando até mesmo uma morte por conta da tentativa de tomada de avião, \n"
+		                    +"fazendo assim com que "+nomeJogador+" tenha que verificar se nenhum repórter flagrou a morte do civil \n" 
+		                    +"e resolver o problema do homicídio e com isso notifica seu general através de um ligação\n"
+		                    +"e espera a resposta para saber o que fazer...\n");
+		             break;   
 			}
-			texto = " - Após a ação do jogador - ";
-			delay(texto);
-			texto = "Sendo a ação do jogador a (sim) ou a (não) ele espera da mesma forma o telefone de seu general, mas não esperava que quem vai ligar para ele é uma pessoa misteriosa, mas que sabe muito sobre ele.";
-			delay(texto);
-			texto = " - Fim do desafio 1 - ";
-			delay(texto);
+		        texto = " - Após a ação do jogador - \n";
+		        delay (texto);
+		        texto = "Sendo a ação do jogador a (sim) ou a (não) ele espera da mesma forma o telefone\n"
+		                +"de seu general, mas não esperava que quem vai ligar para ele é uma pessoa misteriosa,\n"
+		                +"mas que sabe muito sobre ele.\n";
+		        delay (texto);
+		        texto = " -     Fim do desafio 1     -\n ";
+		        delay (texto);
 		}
+		
 		// FINAL DESAFIO 01
 
 		// INICIO DO DESAFIO 02
