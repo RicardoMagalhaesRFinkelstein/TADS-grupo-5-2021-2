@@ -20,13 +20,10 @@ public class Game {
 
 		System.out.println("O AGENTE A NO AFEGANISTÃO");
 
-		System.out.println("Olá,  seja bem-vindo ao jogo!\n");
-		System.out.println("Seu papel é muito importante, vc será o nosso agente");
-		System.out.println("Qual seu nome?");
-		nomeJogador = sc.next();
 
-		System.out.println(nomeJogador + " Escolha uma das opções abaixo:\n\n" + "1) Instruções\n" + "2) Jogar\n"
-				+ "3) Créditos\n" + "4) Sair");
+
+		System.out.println(" Escolha uma das opções abaixo:\n\n" + "1) Instruções\n" 
+		+ "2) Jogar\n" + "3) Créditos\n" + "4) Sair");
 
 		do {
 
@@ -74,7 +71,13 @@ public class Game {
 			System.out.println("Obrigado, até a proxima.");
 		} else {
 			// INICIO DO DESAFIO 01
-			System.out.println("CAPÍTULO 1: O INÍCIO");
+			texto = "CAPÍTULO 1: O INÍCIO\n";
+			delay(texto);
+			
+			System.out.println("Olá,  seja bem-vindo ao jogo!");
+			System.out.println("Seu papel é muito importante, vc será o nosso agente");
+			System.out.println("Qual seu nome?");
+			nomeJogador = sc.next();
 
 			texto = "Após desastres no Afeganistão e o Talibã tomar o poder do país,\n"
 	                +"foi designado um agente da CIA para ir ao Afeganistão";
@@ -82,11 +85,11 @@ public class Game {
 	        texto= "e ajudar na evacuação dos soldados americanos no aeroporto de Cabul no Afeganistão.\n" 
 	                +"Chegando no aeroporto e após conseguir realizar a evacuação dos soldados";
 	        delay(texto);       
-	        texto= nomeJogador+", percebeu que estava faltando um grupo de soldados\n"
+	        texto= "O agente percebeu que estava faltando um grupo de soldados\n"
 	                +"e sabendo que teria que dar uma explicação aos EUA sobre isso\n"
 	                +"ele então tem que decidir se vai a procura dos soldados perdidos ou não...\n";
 	        delay (texto);
-	        System.out.println(nomeJogador+ ", escolha uma das alternativas: \n");
+	        System.out.println(nomeJogador+ ", escolha qual atitude o agente deve tomar: \n");
 	        texto = "[1] - Procurar soldados? \n";
 	        delay (texto);
 	        texto = "[2] - Não procurar soldados?\n";
@@ -151,23 +154,23 @@ public class Game {
 		        switch (n1){
 		        case 1:
 		            
-		            System.out.println(nomeJogador+ ", fica em uma intensa procura sobre os soldados restantes\n"
+		            System.out.println("O agente então fica em uma intensa procura sobre os soldados restantes\n"
 		                    +"até que um grupo de mulheres que foram salvas pelo grupo de soldados\n" 
 		                    +"fala que eles foram capturados pelo grupo terrorista do Talibã\n"
 		                    +"e que viu eles sendo levados dentro de um carro para fora do aeroporto,\n"
-		                    +"com isso em mente e sem poder deixar o local\n"
-		                    +nomeJogador+ " notifica seu general e espera uma resposta através de uma ligação\n"
+		                    +"com isso em mente e sem poder deixar o local.\n"
+		                    +"Ele notifica seu general e espera uma resposta através de uma ligação\n"
 		                    +"do que continuar fazendo, ficar no aeroporto e conseguir evacuar os soldados\n"
 		                    +"e alguns civis ou deixar o aeroporto e ir atrás dos soldados capturado.\n");                   
 		             break;
 		        case 2:
 		            
-		            System.out.println("Com a recusa do "+nomeJogador+" em procurar os soldados perdidos, a multidão \n"
+		            System.out.println("Com com sua recusa em procurar os soldados perdidos, a multidão \n"
 		                    +"que está no aeroporto percebe que sobra algumas vagas ainda no avião e com isso gera \n" 
 		                    +"uma grande briga entre os civis para ver quem vai entrar no avião e acaba que os civis \n"
 		                    +"tentam tomar controle do avião contra os soldados e isso gera uma briga intensa entre soldados e civis,\n" 
 		                    +"gerando até mesmo uma morte por conta da tentativa de tomada de avião, \n"
-		                    +"fazendo assim com que "+nomeJogador+" tenha que verificar se nenhum repórter flagrou a morte do civil \n" 
+		                    +"fazendo assim com que o agente tenha que verificar se nenhum repórter flagrou a morte do civil \n" 
 		                    +"e resolver o problema do homicídio e com isso notifica seu general através de um ligação\n"
 		                    +"e espera a resposta para saber o que fazer...\n");
 		             break;   
@@ -197,7 +200,9 @@ public class Game {
 		delay(texto);
 		texto = "Conforme o passar do tempo, quase ao fim de seu treinamento, Hamid presenciou uma situação que mudou o seu destino.";
 		delay(texto);
-		texto =  "Em um ataque americano contra um vilarejo, eles suspeitaram que um ancião teria ligação com o grupo terrorista local, a Isis-K. Porém o jovem Hamid conhecia aquela pessoa e a considerava alguém inocente.";
+		texto =  "Em um ataque americano contra um vilarejo,"
+				+ " eles suspeitaram que um ancião teria ligação com o grupo terrorista local,"
+				+ " a Isis-K. Porém o jovem Hamid conhecia aquela pessoa e a considerava alguém inocente.";
 		delay(texto);
 		System.out.println(" Escolha uma das alternativas: ");
 		delay(texto);
@@ -378,7 +383,7 @@ public class Game {
 			System.out.println("\nVocê acertou!!!!Conseguiu pegar a dica para novo atentado;");
 		} else {
 			System.out.println("Vc errou!!!! GameOver");
-			sair();
+			fimDeJogo();
 		}
 
 		texto = "Com a senha o Agente abre a caixa e pega um envelope e papel timbrado da embaixada americana "
@@ -421,7 +426,7 @@ public class Game {
 		texto = "Sem muitas informações, o agente segue investigando o local.\n"
 				+ "Graças ao caos na embaixada, há somente 3 caminhos acessíveis.\n";
 		delay(texto);
-		texto = " Para onde o agente deve seguir primeiro?\n";
+		texto = nomeJogador + ", para onde o agente deve seguir primeiro?\n";
 		delay(texto);
 		System.out.println(" (a) Seguir para o saguão principal, aonde há a maior concentração de pessoas");
 		System.out.println(" (b) Ir até a sala de reuniões, aonde há a menor conentração de pessoas");
@@ -463,13 +468,14 @@ public class Game {
 
 		texto = "!!ATENÇÃO, VOCE ESTÁ PRESTES A INICIAR UM COMBATE.!!\n";
 		delay(texto);
-		texto = " Escolha par ou impar para continuar:\n ";
+		texto = nomeJogador + ", escolha par ou impar para continuar:\n ";
 		delay(texto);
 		texto = " (a) Par";
 		delay(texto);
 		texto = " (b) Ímpar\n";
 		delay(texto);
-		texto = " O numero aleatório vai ser sorteado e\n" + "caso seja par ou impar dependendo de sua decisão\n"
+		texto = " O numero aleatório vai ser sorteado e\n" 
+				+ "caso seja par ou impar dependendo de sua decisão\n"
 				+ "voce vencerá o turno do combate.";
 		delay(texto);
 		int ddamage = 0;
