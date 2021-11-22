@@ -251,9 +251,9 @@ public class Game {
 		// FINAL DO DESAFIO 02
 
 		// INÍCIO DO DESAFIO 03
-		System.out.println(" Parabéns!!!! " + nomeJogador + " Você chegou ao desafio três!!!!!\n");
-		System.out.println("CAPÍTULO 3: O RESGATE DOS REFÉNS");
-
+                System.out.println("CAPÍTULO 3: O RESGATE DOS REFÉNS\n");
+		System.out.println(" Parabéns!!!! " + nomeJogador + " Você chegou ao  Capítulo3!!!!!\n");
+		
 		texto = "Agora " + nomeJogador + " vc precisa salvar os reféns.";
 		delay(texto);
 
