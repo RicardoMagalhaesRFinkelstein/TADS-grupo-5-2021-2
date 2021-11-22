@@ -106,7 +106,8 @@ public class Game {
 		        delay(texto);
 		        String palavraChave = "pistola";
 		        String letrasUsadas = "";
-		        String palavraDescoberta ="";
+		        @SuppressWarnings("unused")
+				String palavraDescoberta ="";
 		        String letraAdivinhada = "";
 		        
 		        outerloop:
@@ -123,7 +124,8 @@ public class Game {
 		                    }
 		                    System.out.printf("Forca rodada %d\nQual letra você escolhe?%n", tentativas);
 		                    
-		                    char TentativaDeLetra = new java.util.Scanner(System.in).next().charAt(0);
+		                    @SuppressWarnings("resource")
+							char TentativaDeLetra = new java.util.Scanner(System.in).next().charAt(0);
 		                    if(letrasUsadas.indexOf(TentativaDeLetra)>=0){ 
 		                        System.out.printf("Letra já usada '%c'.%n", TentativaDeLetra);
 		                    }else{
@@ -389,41 +391,152 @@ public class Game {
 		// FIM DO DESAFIO 03
 
 		// INICIO DO DESAFIO 04
-		System.out.println("CAPÍTULO 4: A EMBAIXADA");
-		texto = " O agente chega à embaixada após salvar os reféns sob ordens do seu superior\n"
-				+ "quando é abordado por um homem aparentemente um dos diplomatas do local,ele explica ao agente\n"
-				+ "sobre a situação da embaixada. Ela está cheia de dignitários de vários países\n"
-				+ "que estão buscando obter a documentação para sair do país.\n";
+		 texto = "DESAFIO 04\n";
+		delay(texto);
+		texto = " O agente chega à embaixada após salvar os reféns quando é abordado por um homem,\n"
+				+ "ele se apresenta como diplomata e explica ao agente sobre a situação da embaixada.\n"
+				+ "Ela está cheia de dignitários de outros países que compõem a embaixada\n"
+				+ "buscando obter a documentação para sair do país.\n";
 		delay(texto);
 
 		texto = " Então o agente pergunta:\n";
 		delay(texto);
+		System.out.println(" (a) O senhor notou algum movimento estranho por aqui?");
+		System.out.println(" (b) Qual a situação da embaixada?");
 
-		texto = "  Agente A: O senhor notou algum movimento estranho por aqui ?\n";
+		boolean useless1 = true;
+		do {
+			String useless = sc.next();
+			if (useless.equalsIgnoreCase("a") || useless.equalsIgnoreCase("b")) {
+				texto = "O Diplomata: Tirando o fato de todos estarem e pânico para fugir dessa guerra iminente?\n"
+						+ "notei a falta de alguns embaixadores nesta manhã na reunião, mas ha pouco quando perguntei\n"
+						+ "por eles no prédio, e me foi informado que eles não deixaram as intalações.\n ";
+				delay(texto);
+				useless1 = false;
+			} else
+				System.out.println("Lamento, digite um caracter válido");
+		} while (useless1 == true);
+
+		texto = "Sem muitas informações, o agente segue investigando o local.\n"
+				+ "Graças ao caos na embaixada, há somente 3 caminhos acessíveis.\n";
+		delay(texto);
+		texto = " Para onde o agente deve seguir primeiro?\n";
+		delay(texto);
+		System.out.println(" (a) Seguir para o saguão principal, aonde há a maior concentração de pessoas");
+		System.out.println(" (b) Ir até a sala de reuniões, aonde há a menor conentração de pessoas");
+		System.out.println(" (c) Seguir pelo corredor e ir checando lentamente cada comodo do local");
+		boolean htgo = true;
+		do {
+			String heretogo = sc.next();
+			if (heretogo.equalsIgnoreCase("a")) {
+				texto = "O agente segue pelo saguão principal mas não nota nenhum movimento estranho,\n"
+						+ "as pessoas estão ou em ligações ou organizando suas papeladas para deixarem o pais,\n"
+						+ "o local está uma bagunça mas todos parecem bem calmos.\n";
+				delay(texto);
+				htgo = false;
+			} else if (heretogo.equalsIgnoreCase("b")) {
+				texto = "O agente vai até a sala de reuniões e nota duas pessoas conversando,\n"
+						+ "um deles era o diplomata afegão, ele aparentava estar triste e suplicava\n"
+						+ "ao diplomata americano para não abandonar o país, mas sem aparentes resultados.\n"
+						+ "O Talibã tomaria conta do pais novamente sem o exercito americano.\n";
+				delay(texto);
+				System.out.println(" Escolha outra alternativa:\n");
+				System.out.println(" (a) Seguir para o saguão principal, aonde há a maior concentração de pessoas");
+				System.out.println(" (c) Seguir pelo corredor e ir checando lentamente cada comodo do local");
+
+			} else if (heretogo.equalsIgnoreCase("c")) {
+				texto = "O agente segue pelo corredor olhando sala por sala do complexo,\n"
+						+ "os olhares assustados das pessoas deixam o agente intrigado\n ";
+				delay(texto);
+				htgo = false;
+			} else
+				System.out.println("Lamento, digite um caracter válido.");
+		} while (htgo == true);
+
+		texto = " Até que ele nota um homem com aparencia suspeita,\n"
+				+ "acompanhado de um dos embaixadores que aparentava estar assustado.\n";
+		delay(texto);
+		texto = " Ao tentar se aproximar do homem ele ameaça atirar no embaixador assustando todos no local\n"
+				+ "O agente então trava uma luta contra o terrorista e o desarma\n";
 		delay(texto);
 
-		texto = "  O Diplomata: Tirando o fato de todos estarem e pânico para fugir dessa guerra iminente?\n"
-				+ "    notei a falta de alguns embaixadores nesta manhã na reunião, mas ha pouco quando perguntei\n"
-				+ "    por eles no prédio, e me foi informado que eles não deixaram as intalações.\n ";
+		texto = "!!ATENÇÃO, VOCE ESTÁ PRESTES A INICIAR UM COMBATE.!!\n";
 		delay(texto);
+		texto = " Escolha par ou impar para continuar:\n ";
+		delay(texto);
+		texto = " (a) Par";
+		delay(texto);
+		texto = " (b) Ímpar\n";
+		delay(texto);
+		texto = " O numero aleatório vai ser sorteado e\n" + "caso seja par ou impar dependendo de sua decisão\n"
+				+ "voce vencerá o turno do combate.";
+		delay(texto);
+		int ddamage = 0;
+		int tdamage = 0;
+		do {
+			String escolha12 = sc.next();
+			texto = "Sorteando o numero...";
+			delay(texto);
+			int decisor = (int) (Math.random() * 10 + 1);
+			texto = "O numero sorteado é: " + decisor;
+			delay(texto);
+			if (decisor % 2 == 0) {// PAR
+				texto = "O resultado é par!\n";
+				delay(texto);
+				if (escolha12.equalsIgnoreCase("a")) {
+					texto = "Voce ganhou o turno";
+					delay(texto);
+					texto = "O agente acerta um golpe no terrorista\n";
+					delay(texto);
+					ddamage++;
+				} else if (escolha12.equalsIgnoreCase("b")) {
+					texto = "voce perdeu o turno";
+					delay(texto);
+					texto = "O agente sofre um golpe do terrorista\n";
+					delay(texto);
+					tdamage++;
+				}
 
-		texto = " O agente então segue olhando cada comodo da embaixada,\n"
-				+ "até que ele nota um homem com a uma aparência diferente dos demais,\n"
-				+ "acompanhado de um dos embaixadores, que aparentava estar assustado.\n";
-		delay(texto);
-
-		texto = " Ao tentar se aproximar do homem, ele puxa uma arma e começa a atirar,\n"
-				+ "O agente se assusta, e encontra uma cobertura atrás de uma parede\n";
-		delay(texto);
-		texto = "o homem então corre para o saguão principal aonde da acesso a uma escadaria\n"
-				+ "e entra em uma porta que lá estava, com uma fechadura eletronica.";
-		delay(texto);
-
-		texto = "O agente chega na porta e nota um simbolo da ISIS-K desenhado em sangue em seu adorno.\n"
-				+ "Tambem percebe-se uma fechadura eletrônica que pede uma senha de 6 digitos para o acesso.";
-		delay(texto);
-
-		// FIM DO DESAFIO 04
+			} else if (decisor % 2 >= 1) {// IMPAR
+				texto = "O resultado é impar: ";
+				delay(texto);
+				if (escolha12.equalsIgnoreCase("a")) {
+					texto = "Voce perdeu o turno";
+					delay(texto);
+					texto = "O agente sofre um golpe do terrorista\n";
+					delay(texto);
+					tdamage++;
+				} else if (escolha12.equalsIgnoreCase("b")) {
+					texto = "voce ganhou o turno";
+					delay(texto);
+					texto = "O agente acerta um golpe do terrorista\n";
+					delay(texto);
+					ddamage++;
+				} else
+					System.out.println("Por favor digite um caracter válido");
+			}
+			if (tdamage < 3 && ddamage < 2) {
+				texto = "Escolha novamente par ou impar para continuar:\n ";
+				delay(texto);
+				texto = " (a) Par";
+				delay(texto);
+				texto = " (b) Ímpar\n";
+				delay(texto);
+			}
+		} while (tdamage < 3 && ddamage < 2);
+		if (ddamage >= 2) {
+			System.out.println("Voce Ganhou o combate!\n");
+			texto = " Neutralizando o Alvo e salvando as pessoas do local,\n"
+					+ "O agente parte para examinar o local do acontecido e nota\n"
+					+ "uma porta ligeiramente aberta, ele a abre e ve uma tilha\n "
+					+ "de algum fluido no chão indo escada a baixo da embaixada.";
+			delay(texto);
+		} else if (tdamage >= 3) {
+			System.out.println("Voce perdeu o combate! ");
+			fimDeJogo();
+		}
+		
+	
 		// INICIO DESAFIO 5
 		
 		System.out.println("CAPÍTULO 5: O FINAL");
