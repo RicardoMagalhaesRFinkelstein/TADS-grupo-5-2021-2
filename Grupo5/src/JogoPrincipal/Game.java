@@ -547,8 +547,15 @@ public class Game {
 		int dialogo51 = 0;
 
 		do {
-			texto = "Inicio da conversa do Agente com o vilão";
+			texto = "O agente então desce as escadas da embaixada e após muitos anos\n "
+					+ "sem se reencontrar, vê Hamid parado na sua frente. Ele está\n"
+					+ "com uma bomba abaixo de seus pés, e diz ao agente:";
 			delay(texto);
+			texto = "  Hamid: Você não vai passar por mim!\n"
+					+ "sabe quanto tempo esperei por isso ?\n"
+					+ "O agente então responde...\n";
+			delay(texto);
+					
 			texto = "Escolha a opção de 1 a 3";
 			delay(texto);
 			dialogo51 = sc.nextInt();
@@ -556,27 +563,30 @@ public class Game {
 			switch (dialogo51) {
 			case 1:
 
-				texto = "Dialogo 1";
+				texto = "Tente seu melhor então Hamid,\n"
+						+ "essa bomba não vai explodir!";
 				delay(texto);
 
 			case 2:
-				texto = "Dialogo 2";
+				texto = "Por que está fazendo isso ?\n"
+						+ "nós podemos resolver as coisas, converse comigo!";
 				delay(texto);
 				break;
 
 			case 3:
-				texto = "Dialogo 3";
+				texto = "Hamid, eu errei com voce!\n"
+					+ "mas não podemos mudar o passado, apenas aprender a viver com ele.";
 				delay(texto);
 				break;
 			}
 
-		} while (dialogo51 == 0 || dialogo51 == 1 || dialogo51 == 2 || dialogo51 == 3 || dialogo51 == 4
-				|| dialogo51 == 5);
+		} while (dialogo51 == 0 || dialogo51 == 1 || dialogo51 == 2 || dialogo51 == 3);
 
 		int golpeRuim = 0;
-		texto = "Briga física entre o Agente e o vilão";
+		texto = "Eu não ligo, voces erraram e os americanos tem que pagar!!";
 		delay(texto);
-
+		texto = "(Hamid então parte para cima do agente travando um combate)";
+		delay(texto);
 		for (int i = 5; i > 0; i--) {
 			texto = "Selecione o golpe:\n 1: Soco na boca do estômago\n 2: golpe na garganta\n 3: Cruzado no queixo\n 4: Chute na canela\n 5: Empurrão\n 6: Soco no braço\n ";
 			delay(texto);
@@ -606,7 +616,7 @@ public class Game {
 		texto = "Hamid finalmente desaba, e o  Agente corre para desarmar a bomba. Mas antes disso, ele procura por pistas no local";
 		delay(texto);
 		for (int j = 0; j < 4; j++) {
-			texto = "Onde o agente olha á seguir?\n 1: \n 2: \n 3: \n 4: \n 5: \n 6: \n 7: \n";
+			texto = "Onde o agente olha á seguir?\n 1: Bandeira Afegã\n 2: A bomba em si\n 3: Teto do recinto\n 4: Um relógio suíço, largado no chão\n 5: Um confortável divã\n 6: Quadro roxo\n 7: Guernica, de Picasso\n";
 			delay(texto);
 			int escolhaAgente = sc.nextInt();
 
@@ -657,14 +667,14 @@ public class Game {
 
 		int desarmeDaBomba = sc.nextInt();
 		if (desarmeDaBomba == 1) {
-			texto = "PARABÉNS, BOMBA DESARMADA COM SUCESSO. BOM TRABALHO "+ nomeJogador;
+			texto = "PARABÉNS, BOMBA DESARMADA COM SUCESSO. BOM TRABALHO, "+ nomeJogador;
 			delay(texto);
 		} else if (desarmeDaBomba == 2) {
 			texto = "SEM EFEITO NENHUM, O AGENTE PERCEBE QUE SÓ TEM TEMPO PARA MAIS UMA TENTATIVA. ESCOLHA OUTRA OPÇÃO";
 			delay(texto);
 			desarmeDaBomba = sc.nextInt();
 			if (desarmeDaBomba == 1) {
-				texto = "PARABÉNS, AGENTE DESARMOU A BOMBA COM SUCESSO, GANHANDO O JOGO";
+				texto = "PARABÉNS, BOMBA DESARMADA COM SUCESSO. BOM TRABALHO, "+ nomeJogador;
 				delay(texto);
 			} else {
 				texto = "AGENTE FALHOU. BOMBA EXPLODE";
@@ -676,7 +686,11 @@ public class Game {
 			delay(texto);
 			fimDeJogo();
 		}
-
+		texto ="O agente salva o dia novamente, desarmando a bomba e impedindo Hamid de causar mais\n"
+				+ "problemas. O exercito americano prosseguiu com a evacuação do afeganistão sem mais problemas\n";
+				delay(texto);
+		texto = "Obrigado por jogar, " + nomeJogador + "!!";
+		delay(texto);
 	}
 
 	static void fimDeJogo() {
@@ -700,7 +714,7 @@ public class Game {
 		int tamanhoDelay = TextoFuncao.length();
 		System.out.println(TextoFuncao);
 		try {
-			TimeUnit.SECONDS.sleep(tamanhoDelay / 55);
+			TimeUnit.SECONDS.sleep(tamanhoDelay / 25);
 		} catch (InterruptedException ie) {
 			Thread.currentThread().interrupt();
 		}
