@@ -1,11 +1,10 @@
-package levels;
+package JogoPrincipal;
 
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Game {
-
 	static String texto;
 	static String nomeJogador;
 
@@ -718,3 +717,4 @@ public class Game {
 		}
 	}
 }
+
