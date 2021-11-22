@@ -292,13 +292,13 @@ public class Game {
 		texto = "Resolva a equação de segundo grau : 5x²-20=0";
 		delay(texto);
 
-		System.out.println(nomeJogador + " Vc só tem uma chance, escolha uma letra para as alternativas abaixo: \n"
-				+ "a) 1.\n" + "b) 2.\n" // ALTERNATIVA CORRETA
-				+ "c) 3.\n" + "d) 4");
+		System.out.println(nomeJogador + " Vc só tem uma chance, escolha alternativa abaixo, quantas vezes ele quase perdeu a vida: \n"
+				+ "1) 1 vez  .\n" + "2) 2 vezes.\n" // ALTERNATIVA CORRETA
+				+ "c) 3 vezes.\n" + "d) 4 vezes");
 
-		char alternativa = sc.next().toLowerCase().charAt(0);
+		int alternativa = sc.nextInt();
 
-		if (alternativa == 'b') {
+		if (alternativa == 2) {
 			System.out.println("\nVocê acertou!!!!Conseguiu salvar as professoras");
 		} else {
 			System.out.println("Vc errou!!!! GameOver");
@@ -343,11 +343,11 @@ public class Game {
 				System.out.println("Parabéns!!!!!Vc salvou os soldados americanos!");
 				acertou = true;
 			} else if (palpite < numeroAleatorio) {
-				System.out.println("Seu palpite é menor que o número escolhido, então aumente seu número, vc tem "
+				System.out.println("Seu palpite está baixo, então chute um número maior, vc tem "
 						+ tentativas-- + " chances restantes");
 
 			} else {
-				System.out.println("Seu palpite é maior que o numero escolhido, então diminua seu número, vc tem "
+				System.out.println("Seu palpite está alto, então chute um número menor, vc tem "
 						+ tentativas-- + " chances restantes");
 
 			}
