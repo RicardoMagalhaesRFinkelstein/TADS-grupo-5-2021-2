@@ -289,10 +289,10 @@ public class Game {
 		System.out.println("Agora " + nomeJogador + ", para lembrar quantas vezes Hamid "
 				+ "quase´perdeu a vida nos treinamentos. \n\n\n");
 
-		texto = "Resolva a equação de segundo grau : 5x²-20=0";
+		texto = "Resolva a equação de segundo grau : 5x²-20=0 para descobrir quantas vezes Hamid quase morreu";
 		delay(texto);
 
-		System.out.println(nomeJogador + " Vc só tem uma chance, escolha alternativa abaixo, quantas vezes ele quase perdeu a vida: \n"
+		System.out.println(nomeJogador + " Vc só tem uma chance, escolha alternativa abaixo: \n"
 				+ "1) 1 vez  .\n" + "2) 2 vezes.\n" // ALTERNATIVA CORRETA
 				+ "3) 3 vezes.\n" + "4) 4 vezes");
 
